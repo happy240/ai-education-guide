@@ -1,0 +1,97 @@
+/* 暗色主题样式 */
+:root {
+  /* 亮色主题默认变量 */
+  --vp-c-bg: #ffffff;
+  --vp-c-text: #2c3e50;
+  --vp-c-brand: #3eaf7c;
+  --vp-c-brand-light: #42b983;
+}
+
+.dark {
+  /* 暗色主题变量 */
+  --vp-c-bg: #1a1a1a;
+  --vp-c-text: #f5f5f5;
+  --vp-c-brand: #42d392;
+  --vp-c-brand-light: #49b79d;
+  
+  /* 自定义组件样式 */
+  --custom-block-bg: #2a2a2a;
+  --custom-block-border: #3a3a3a;
+  --custom-block-text: #e0e0e0;
+  
+  /* 代码块样式 */
+  --code-bg: #2a2a2a;
+  --code-text: #e0e0e0;
+  
+  /* 链接样式 */
+  --link-color: #42d392;
+  --link-hover-color: #49b79d;
+}
+
+/* 自定义容器暗色样式 */
+.dark .custom-container {
+  background-color: var(--custom-block-bg);
+  border-color: var(--custom-block-border);
+  color: var(--custom-block-text);
+}
+
+/* 代码块暗色样式 */
+.dark pre,
+.dark code {
+  background-color: var(--code-bg);
+  color: var(--code-text);
+}
+
+/* 链接暗色样式 */
+.dark a {
+  color: var(--link-color);
+}
+
+.dark a:hover {
+  color: var(--link-hover-color);
+}
+
+/* 导航栏暗色样式 */
+.dark .nav-bar {
+  background-color: var(--vp-c-bg);
+  border-bottom: 1px solid var(--custom-block-border);
+}
+
+/* 侧边栏暗色样式 */
+.dark .sidebar {
+  background-color: var(--vp-c-bg);
+  border-right: 1px solid var(--custom-block-border);
+}
+
+/* 页脚暗色样式 */
+.dark .footer {
+  background-color: var(--vp-c-bg);
+  border-top: 1px solid var(--custom-block-border);
+  color: var(--vp-c-text);
+}
+
+/* 特殊容器暗色样式 */
+.dark .tip {
+  background-color: rgba(66, 211, 146, 0.1);
+  border-left-color: var(--vp-c-brand);
+}
+
+.dark .info {
+  background-color: rgba(73, 183, 157, 0.1);
+  border-left-color: var(--vp-c-brand-light);
+}
+
+.dark .details {
+  background-color: var(--custom-block-bg);
+  border-color: var(--custom-block-border);
+}
+
+/* 版本信息和阅读量暗色样式 */
+.dark [style*="color: #888"] {
+  color: #aaa !important;
+}
+
+/* 确保emoji在暗色主题下清晰可见 */
+.dark .emoji {
+  filter: brightness(1.2);
+} 
