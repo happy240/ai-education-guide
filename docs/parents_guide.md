@@ -51,25 +51,6 @@
 
 </div>
 
-#### AI能力的本质与教育启示
-
-在帮助孩子使用AI工具时，家长需要理解一个重要观点：使用AI的能力本质上是基于沟通和逻辑思维的基本能力。这个认识对教育有重要启示：
-
-1. 培养表达能力：
-   - 教导孩子清晰表达想法
-   - 训练结构化描述问题的能力
-   - 鼓励多角度阐述观点
-
-2. 重视思维训练：
-   - 引导孩子进行逻辑推理
-   - 培养系统思考的习惯
-   - 强化分析和解决问题的能力
-
-3. 教育方向：
-   - 将提升表达能力作为重点
-   - 把逻辑思维训练融入日常
-   - 这些基础能力将终身受用
-
 #### 新型职业素养
 <div class="skill-cards">
   <div class="skill-card">
@@ -100,25 +81,52 @@
   </div>
 </div>
 
+#### AI能力的本质与教育启示
+
+在帮助孩子使用AI工具时，家长需要理解一个重要观点：使用AI的能力本质上是基于沟通和逻辑思维的基本能力。这个认识对教育有重要启示：
+
+1. 培养表达能力：
+   - 教导孩子清晰表达想法
+   - 训练结构化描述问题的能力
+   - 鼓励多角度阐述观点
+
+2. 重视思维训练：
+   - 引导孩子进行逻辑推理
+   - 培养系统思考的习惯
+   - 强化分析和解决问题的能力
+
+3. 教育方向：
+   - 将提升表达能力作为重点
+   - 把逻辑思维训练融入日常
+   - 这些基础能力将终身受用
+   
 ### 2. 教育目标的转变
 
-#### 传统教育目标
-```text
-传统教育关注点：
+<div style="display: flex; justify-content: space-between; gap: 20px;">
+
+<div style="flex: 1; padding: 20px; border: 1px solid #eee; border-radius: 8px; background: #fff;">
+<div style="font-weight: bold; margin-bottom: 10px; color: #333;">传统教育目标</div>
+<div style="color: #666;">
+
 - 知识传授为主
-- 标准答案导向
+- 标准答案导向  
 - 考试分数至上
 - 单一学科能力
-```
+</div>
+</div>
 
-#### AI时代教育目标
-```text
-新时代教育重点：
+<div style="flex: 1; padding: 20px; border: 1px solid #eee; border-radius: 8px; background: #fff;">
+<div style="font-weight: bold; margin-bottom: 10px; color: #333;">AI时代教育目标</div>
+<div style="color: #666;">
+
 - 培养学习能力
 - 强调创新思维
-- 注重综合素质
+- 注重综合素质  
 - 跨学科融合
-```
+</div>
+</div>
+
+</div>
 
 ### 3. 不重视AI应用能力的潜在风险
 
@@ -518,27 +526,83 @@ AI回答：建议按以下步骤：
 费曼学习法是一种高效的学习方法，通过"教会别人"来加深自己的理解。结合AI技术，我们可以让这个过程更加高效和有趣。
 
 #### 基本步骤
-```text
-1. 选择主题：
-   - 让孩子选择需要掌握的知识点
-   - 使用AI帮助分解复杂概念
-   - 制定学习计划和目标
 
-2. 向AI解释：
-   - 让孩子用自己的话向AI解释概念
-   - AI充当听众并提供反馈
-   - 发现知识理解的盲点
+<div class="flow-steps">
+  <div class="step-card">
+    <div class="step-title">1️⃣ 选择主题</div>
+    <div class="step-content">
+      - 让孩子选择需要掌握的知识点
+      - 使用AI帮助分解复杂概念
+      - 制定学习计划和目标
+    </div>
+    <div class="arrow">↓</div>
+  </div>
 
-3. AI辅助简化：
-   - 用AI帮助将复杂概念简化
-   - 生成类比和实例
-   - 创建图示和示意图
+  <div class="step-card">
+    <div class="step-title">2️⃣ 向AI解释</div> 
+    <div class="step-content">
+      - 让孩子用自己的话向AI解释概念
+      - AI充当听众并提供反馈
+      - 发现知识理解的盲点
+    </div>
+    <div class="arrow">↓</div>
+  </div>
 
-4. 实践和反馈：
-   - 通过AI生成练习题
-   - 检验理解程度
-   - 获取改进建议
-```
+  <div class="step-card">
+    <div class="step-title">3️⃣ AI辅助简化</div>
+    <div class="step-content">
+      - 用AI帮助将复杂概念简化
+      - 生成类比和实例
+      - 创建图示和示意图
+    </div>
+    <div class="arrow">↓</div>
+  </div>
+
+  <div class="step-card">
+    <div class="step-title">4️⃣ 实践和反馈</div>
+    <div class="step-content">
+      - 通过AI生成练习题
+      - 检验理解程度
+      - 获取改进建议
+    </div>
+  </div>
+</div>
+
+<style>
+.flow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.step-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  position: relative;
+}
+
+.step-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.step-content {
+  color: #666;
+}
+
+.arrow {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #666;
+  font-size: 20px;
+}
+</style>
 
 #### 实践案例
 ```text
