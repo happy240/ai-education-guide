@@ -5,7 +5,7 @@ hero:
   text: 面向不同群体的 AI 教育指南
   tagline: 让每个人都能理解并合理使用 AI
   image:
-    src: /hero-image.png
+    src: /hero-image.svg
     alt: AI Education
   actions:
     - theme: brand
