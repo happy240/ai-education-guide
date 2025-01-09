@@ -44,4 +44,8 @@ features:
 - 贡献您的创作智慧
 - 指出内容中的瑕疵
 
-让我们携手描绘AI教育的美好愿景，共同开启这段充满可能的未来之旅。 
+让我们携手描绘AI教育的美好愿景，共同开启这段充满可能的未来之旅。
+
+<div style="text-align: right; font-size: 0.8em; color: #888; margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee;">
+v1.0.0 | 2024-01-09
+</div> 
