@@ -11,11 +11,16 @@
         </linearGradient>
         <!-- 发光效果 -->
         <filter id="glow">
-            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
             <feMerge>
                 <feMergeNode in="coloredBlur"/>
                 <feMergeNode in="SourceGraphic"/>
             </feMerge>
+        </filter>
+        <!-- AI光环效果 -->
+        <filter id="aiGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="8" result="blur"/>
+            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
         </filter>
     </defs>
 
@@ -26,50 +31,79 @@
     <rect width="800" height="400" fill="url(#grid)"/>
 
     <!-- 装饰性圆环 -->
-    <circle cx="600" cy="100" r="60" stroke="#4DB6AC" stroke-width="2" fill="none" opacity="0.3"/>
-    <circle cx="200" cy="300" r="80" stroke="#81C784" stroke-width="2" fill="none" opacity="0.3"/>
+    <circle cx="600" cy="100" r="80" stroke="#4DB6AC" stroke-width="3" fill="none" opacity="0.3"/>
+    <circle cx="200" cy="300" r="100" stroke="#81C784" stroke-width="3" fill="none" opacity="0.3"/>
 
     <!-- 科技线条装饰 -->
-    <path d="M0 200 Q 200 150, 400 200 T 800 200" stroke="#64B5F6" stroke-width="2" fill="none" opacity="0.2"/>
-    <path d="M0 220 Q 200 170, 400 220 T 800 220" stroke="#4DB6AC" stroke-width="2" fill="none" opacity="0.2"/>
+    <path d="M0 200 Q 200 150, 400 200 T 800 200" stroke="#64B5F6" stroke-width="3" fill="none" opacity="0.3"/>
+    <path d="M0 220 Q 200 170, 400 220 T 800 220" stroke="#4DB6AC" stroke-width="3" fill="none" opacity="0.3"/>
 
-    <!-- 主要植物元素 - 更大更突出的茁壮小苗 -->
-    <g transform="translate(350, 150)" filter="url(#glow)">
-        <!-- 茎干 -->
-        <path d="M0 200 C -20 150, 20 100, 0 50" stroke="#4CAF50" stroke-width="8" fill="none"/>
+    <!-- AI机器人 -->
+    <g transform="translate(500, 200)" filter="url(#aiGlow)">
+        <!-- 机器人头部 -->
+        <rect x="-40" y="-60" width="80" height="80" rx="15" fill="#42A5F5" opacity="0.9"/>
+        <!-- 机器人眼睛 -->
+        <circle cx="-15" cy="-30" r="8" fill="#ffffff"/>
+        <circle cx="15" cy="-30" r="8" fill="#ffffff"/>
+        <!-- 机器人天线 -->
+        <path d="M-20 -60 L-30 -80 L-25 -85" stroke="#42A5F5" stroke-width="4"/>
+        <path d="M20 -60 L30 -80 L25 -85" stroke="#42A5F5" stroke-width="4"/>
+        <!-- 机器人身体 -->
+        <rect x="-30" y="20" width="60" height="80" rx="10" fill="#42A5F5" opacity="0.9"/>
+        <!-- 机器人手臂 -->
+        <path d="M-30 30 C-60 30, -70 60, -60 90" stroke="#42A5F5" stroke-width="8" fill="none"/>
+        <path d="M30 30 C60 30, 70 60, 60 90" stroke="#42A5F5" stroke-width="8" fill="none"/>
+    </g>
+
+    <!-- 茁壮的植物 -->
+    <g transform="translate(300, 200)" filter="url(#glow)">
+        <!-- 主干 -->
+        <path d="M0 150 C-20 100, 20 50, 0 0" stroke="#2E7D32" stroke-width="20" fill="none"/>
         
-        <!-- 左侧叶子 -->
-        <path d="M0 150 C -40 130, -60 90, -40 60" stroke="#66BB6A" stroke-width="6" fill="none"/>
-        <path d="M-5 120 C -45 100, -65 60, -45 30" stroke="#81C784" stroke-width="6" fill="none"/>
+        <!-- 左侧叶子组 -->
+        <path d="M-10 120 C-60 100, -80 60, -60 20" stroke="#388E3C" stroke-width="15" fill="#388E3C"/>
+        <path d="M-5 80 C-70 60, -90 20, -70 -20" stroke="#43A047" stroke-width="15" fill="#43A047"/>
+        <path d="M-5 40 C-50 20, -70 -20, -50 -40" stroke="#4CAF50" stroke-width="15" fill="#4CAF50"/>
         
-        <!-- 右侧叶子 -->
-        <path d="M0 150 C 40 130, 60 90, 40 60" stroke="#66BB6A" stroke-width="6" fill="none"/>
-        <path d="M5 120 C 45 100, 65 60, 45 30" stroke="#81C784" stroke-width="6" fill="none"/>
+        <!-- 右侧叶子组 -->
+        <path d="M10 120 C60 100, 80 60, 60 20" stroke="#388E3C" stroke-width="15" fill="#388E3C"/>
+        <path d="M5 80 C70 60, 90 20, 70 -20" stroke="#43A047" stroke-width="15" fill="#43A047"/>
+        <path d="M5 40 C50 20, 70 -20, 50 -40" stroke="#4CAF50" stroke-width="15" fill="#4CAF50"/>
         
         <!-- 顶部新芽 -->
-        <path d="M0 50 C -10 30, 10 30, 0 0" stroke="#A5D6A7" stroke-width="4" fill="none"/>
+        <path d="M0 0 C-15 -20, 15 -20, 0 -40" stroke="#66BB6A" stroke-width="12" fill="#66BB6A"/>
+        <circle cx="0" cy="-40" r="10" fill="#81C784"/>
     </g>
 
-    <!-- 装饰性科技元素 -->
+    <!-- 连接线 - 表示AI与植物的互动 -->
     <g opacity="0.6">
-        <!-- 数据流动效果 -->
-        <rect x="50" y="50" width="20" height="4" fill="#64B5F6">
-            <animate attributeName="x" from="50" to="730" dur="3s" repeatCount="indefinite"/>
-        </rect>
-        <rect x="150" y="250" width="20" height="4" fill="#4DB6AC">
-            <animate attributeName="x" from="150" to="830" dur="4s" repeatCount="indefinite"/>
-        </rect>
+        <path d="M380 160 C 420 140, 460 140, 500 160" stroke="#64B5F6" stroke-width="3" fill="none">
+            <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite"/>
+        </path>
+        <path d="M380 180 C 420 160, 460 160, 500 180" stroke="#4DB6AC" stroke-width="3" fill="none">
+            <animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/>
+        </path>
     </g>
 
-    <!-- 点缀的小圆点 -->
+    <!-- 装饰性粒子 -->
     <g>
-        <circle cx="100" cy="100" r="3" fill="#FFB74D"/>
-        <circle cx="700" cy="300" r="3" fill="#FFB74D"/>
-        <circle cx="200" cy="200" r="3" fill="#FFB74D"/>
-        <circle cx="600" cy="150" r="3" fill="#FFB74D"/>
+        <circle cx="100" cy="100" r="4" fill="#FFB74D">
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="700" cy="300" r="4" fill="#FFB74D">
+            <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="200" cy="200" r="4" fill="#FFB74D">
+            <animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="600" cy="150" r="4" fill="#FFB74D">
+            <animate attributeName="opacity" values="1;0.3;1" dur="3s" repeatCount="indefinite"/>
+        </circle>
     </g>
 
     <!-- 科技感六边形装饰 -->
-    <path d="M700 100 L720 110 L720 130 L700 140 L680 130 L680 110 Z" stroke="#4DB6AC" fill="none"/>
-    <path d="M100 300 L120 310 L120 330 L100 340 L80 330 L80 310 Z" stroke="#81C784" fill="none"/>
+    <g opacity="0.4">
+        <path d="M700 100 L730 115 L730 145 L700 160 L670 145 L670 115 Z" stroke="#4DB6AC" stroke-width="2" fill="none"/>
+        <path d="M100 300 L130 315 L130 345 L100 360 L70 345 L70 315 Z" stroke="#81C784" stroke-width="2" fill="none"/>
+    </g>
 </svg> 

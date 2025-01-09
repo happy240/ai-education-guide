@@ -5,6 +5,8 @@
   --vp-c-text: #2c3e50;
   --vp-c-brand: #3eaf7c;
   --vp-c-brand-light: #42b983;
+  --vp-c-bg-soft: #f9f9f9;
+  --vp-c-bg-mute: #f1f1f1;
 }
 
 .dark {
@@ -13,6 +15,8 @@
   --vp-c-text: #f5f5f5;
   --vp-c-brand: #42d392;
   --vp-c-brand-light: #49b79d;
+  --vp-c-bg-soft: #242424;
+  --vp-c-bg-mute: #2f2f2f;
   
   /* 自定义组件样式 */
   --custom-block-bg: #2a2a2a;
@@ -107,9 +111,37 @@
 /* 修复可能有浅色背景的区块 */
 .dark .vp-doc div[class*='language-'],
 .dark .vp-doc [class*='block'],
-.dark .custom-block {
+.dark .custom-block,
+.dark .vp-doc div[class*='example'],
+.dark .vp-doc div[class*='demo'],
+.dark .vp-doc div[class*='card'],
+.dark .vp-doc .custom-block div {
   background-color: var(--custom-block-bg);
   color: var(--custom-block-text);
+}
+
+/* 修复深色主题下的卡片和示例块 */
+.dark .vp-doc .card,
+.dark .vp-doc .example,
+.dark .vp-doc .demo {
+  border-color: var(--custom-block-border);
+  background-color: var(--vp-c-bg-soft);
+}
+
+/* 修复深色主题下的标签和徽章 */
+.dark .vp-doc .badge,
+.dark .vp-doc .tag {
+  background-color: var(--vp-c-bg-mute);
+  color: var(--vp-c-text);
+}
+
+/* 修复深色主题下的警告和提示块 */
+.dark .warning,
+.dark .danger,
+.dark .note {
+  background-color: var(--custom-block-bg);
+  color: var(--custom-block-text);
+  border-color: var(--custom-block-border);
 }
 
 /* 确保表格在深色主题下的可见性 */
