@@ -536,22 +536,38 @@ AI就像是：
 ```
 
 ## 学习小秘诀
-从使用AI学习中，我们发现这些重要规律：
 
-1. 循序渐进：
-   - 先易后难
-   - 一步一步来
-   - 不懂就问
+<div class="learning-card">
+  <div class="step">
+    <div class="step-icon">🎯</div>
+    <div class="step-title">循序渐进</div>
+    <div class="step-content">
+      - 先易后难
+      - 一步一步来  
+      - 不懂就问
+    </div>
+  </div>
 
-2. 主动思考：
-   - 先自己想
-   - 再问AI
-   - 最后复习
+  <div class="step">
+    <div class="step-icon">🤔</div>
+    <div class="step-title">主动思考</div>
+    <div class="step-content">
+      - 先自己想
+      - 再问AI
+      - 最后复习
+    </div>
+  </div>
 
-3. 学习方法：
-   - 多动手
-   - 多练习
-   - 多分享
+  <div class="step">
+    <div class="step-icon">✍️</div>
+    <div class="step-title">学习方法</div>
+    <div class="step-content">
+      - 多动手
+      - 多练习
+      - 多分享
+    </div>
+  </div>
+</div>
 
 ## 小朋友常见问题解答
 
