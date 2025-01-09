@@ -1,0 +1,26 @@
+export default {
+  title: 'AI 教育指南',
+  description: '面向不同群体的 AI 教育指南',
+  base: '/ai-education-guide/',  // 对应你的 GitHub 仓库名
+  themeConfig: {
+    nav: [
+      { text: '首页', link: '/' },
+      { text: 'GitHub', link: 'https://github.com/happy240/ai-education-guide' }
+    ],
+    sidebar: [
+      {
+        text: '指南',
+        items: [
+          { text: '教师指南', link: '/teachers_guide' },
+          { text: '家长指南', link: '/parents_guide' },
+          { text: '中学生指南', link: '/middle_school_guide' },
+          { text: '小学生指南', link: '/primary_student_guide' }
+        ]
+      }
+    ],
+    footer: {
+      message: '基于 MIT 许可发布',
+      copyright: 'Copyright © 2024'
+    }
+  }
+} 
