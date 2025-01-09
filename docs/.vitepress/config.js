@@ -18,7 +18,7 @@ export default {
       }
     ],
     footer: {
-      message: '基于 MIT 许可发布',
+      message: 'Write and generate with ❤️ | 基于 MIT 许可发布',
       copyright: 'Copyright © 2024'
     }
   },
