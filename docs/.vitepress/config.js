@@ -21,5 +21,9 @@ export default {
       message: '基于 MIT 许可发布',
       copyright: 'Copyright © 2024'
     }
-  }
+  },
+  head: [
+    ['script', { src: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js' }],
+    ['script', { src: '/custom.js' }]
+  ]
 } 
