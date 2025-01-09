@@ -1,0 +1,17 @@
+{
+  "name": "ai-education-guide",
+  "version": "1.0.0",
+  "description": "AI 教育指南",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "keywords": ["AI", "education", "guide"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0-rc.31",
+    "vue": "^3.3.8"
+  }
+} 
