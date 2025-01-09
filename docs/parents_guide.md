@@ -52,20 +52,34 @@
 </div>
 
 #### 新型职业素养
-1. 数字素养：
-   - 理解AI工具的优势和局限
-   - 善用AI提升工作效率
-   - 数据分析和解读能力
+<div class="skill-cards">
+  <div class="skill-card">
+    <div class="skill-title">数字素养</div>
+    <div class="skill-content">
+      - 理解AI工具的优势和局限
+      - 善用AI提升工作效率
+      - 数据分析和解读能力
+    </div>
+  </div>
 
-2. 人文素养：
-   - 同理心和情感智慧
-   - 跨文化交际能力
-   - 价值判断能力
+  <div class="skill-card">
+    <div class="skill-title">人文素养</div>
+    <div class="skill-content">
+      - 同理心和情感智慧
+      - 跨文化交际能力
+      - 价值判断能力
+    </div>
+  </div>
 
-3. 创新能力：
-   - 发现和定义问题
-   - 设计创新解决方案
-   - 跨领域知识整合
+  <div class="skill-card">
+    <div class="skill-title">创新能力</div>
+    <div class="skill-content">
+      - 发现和定义问题
+      - 设计创新解决方案
+      - 跨领域知识整合
+    </div>
+  </div>
+</div>
 
 ### 2. 教育目标的转变
 
@@ -1172,3 +1186,29 @@ v1.0.0 | 2024-01-09
 [^4]: 最高效、最著名的学习方法——费曼学习法. https://m.sohu.com/a/835398656_100934/
 
 [^5]: AI+费曼学习法，你就是下一代学神. https://www.toutiao.com/article/7416622163806929447/
+
+<style>
+.skill-cards {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.skill-card {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.skill-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.skill-content {
+  color: #666;
+}
+</style>
