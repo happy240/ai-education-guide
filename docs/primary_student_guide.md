@@ -1,5 +1,13 @@
-# 小学生AI学习助手指南 🌈
+# 小学生AI学习助手指南：和AI做朋友 🌈
 
+## 指南定位
+亲爱的小朋友，这本指南是专门为你准备的，它会帮助你：
+- 认识AI这个新朋友
+- 学会正确使用AI学习
+- 培养好的学习习惯
+- 让学习变得更有趣
+
+## 前言
 <div class="fun-container">
   <div class="mascot">🤖</div>
   <div class="speech-bubble">
@@ -605,4 +613,63 @@ v1.0.0 | 2024-01-09
   color: #666;
   line-height: 1.5;
 }
+
+.teacher-tips, .parent-tips {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 15px 0;
+  border-left: 4px solid #3eaf7c;
+}
+
+.tip-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.tip-content {
+  padding-left: 20px;
+}
 </style> 
+
+## 和老师、家长一起学习 🌟
+
+### 听老师的话
+<div class="teacher-tips">
+  <div class="tip-title">👨‍🏫 在课堂上：</div>
+  <div class="tip-content">
+    - 按照老师说的方法使用AI
+    - 遇到不懂的要举手提问
+    - 和同学们一起讨论学习心得
+  </div>
+</div>
+
+<div class="teacher-tips">
+  <div class="tip-title">📚 做作业时：</div>
+  <div class="tip-content">
+    - 先自己认真思考
+    - 实在不会再问AI
+    - 把AI帮助过的地方告诉老师
+  </div>
+</div>
+
+### 和爸爸妈妈一起学
+<div class="parent-tips">
+  <div class="tip-title">🏠 在家里：</div>
+  <div class="tip-content">
+    - 和爸爸妈妈一起定使用时间
+    - 遇到问题先问爸爸妈妈
+    - 分享学到的新知识
+  </div>
+</div>
+
+<div class="parent-tips">
+  <div class="tip-title">🤝 一起进步：</div>
+  <div class="tip-content">
+    - 和爸爸妈妈一起探索AI
+    - 遵守约定好的规则
+    - 学会感恩和分享
+  </div>
+</div> 
