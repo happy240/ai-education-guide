@@ -1,7 +1,6 @@
 export default {
   title: 'AI 教育指南',
   description: '面向不同群体的 AI 教育指南',
-  base: '/ai-education-guide/',  // 对应你的 GitHub 仓库名
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },
