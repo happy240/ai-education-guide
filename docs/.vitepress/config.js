@@ -11,10 +11,10 @@ export default {
       {
         text: '指南',
         items: [
-          { text: '教师指南', link: '/teachers_guide' },
-          { text: '家长指南', link: '/parents_guide' },
-          { text: '中学生指南', link: '/middle_school_guide' },
-          { text: '小学生指南', link: '/primary_student_guide' }
+          { text: '教师指南', link: '/teachers_guide.html' },
+          { text: '家长指南', link: '/parents_guide.html' },
+          { text: '中学生指南', link: '/middle_school_guide.html' },
+          { text: '小学生指南', link: '/primary_student_guide.html' }
         ]
       }
     ],
