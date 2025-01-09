@@ -95,3 +95,50 @@
 .dark .emoji {
   filter: brightness(1.2);
 } 
+
+/* 确保深色主题下所有文字块的可见性 */
+.dark div,
+.dark p,
+.dark span,
+.dark li {
+  color: var(--vp-c-text);
+}
+
+/* 修复可能有浅色背景的区块 */
+.dark .vp-doc div[class*='language-'],
+.dark .vp-doc [class*='block'],
+.dark .custom-block {
+  background-color: var(--custom-block-bg);
+  color: var(--custom-block-text);
+}
+
+/* 确保表格在深色主题下的可见性 */
+.dark table {
+  border-color: var(--custom-block-border);
+}
+
+.dark th,
+.dark td {
+  background-color: var(--custom-block-bg);
+  color: var(--custom-block-text);
+  border-color: var(--custom-block-border);
+}
+
+/* 确保引用块在深色主题下的可见性 */
+.dark blockquote {
+  background-color: var(--custom-block-bg);
+  color: var(--custom-block-text);
+  border-left-color: var(--custom-block-border);
+}
+
+/* 确保按钮和交互元素在深色主题下的可见性 */
+.dark button,
+.dark .button {
+  background-color: var(--vp-c-brand);
+  color: #ffffff;
+}
+
+.dark button:hover,
+.dark .button:hover {
+  background-color: var(--vp-c-brand-light);
+} 

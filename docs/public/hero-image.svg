@@ -1,73 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- 背景 -->
-  <defs>
-    <linearGradient id="bg-gradient" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#e8f5ff"/>
-      <stop offset="100%" stop-color="#f0fff4"/>
-    </linearGradient>
-  </defs>
-  <rect width="400" height="400" fill="url(#bg-gradient)" rx="20"/>
+<svg width="800" height="400" viewBox="0 0 800 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- 科技感背景网格 -->
+    <defs>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2C5F4E" stroke-width="0.5" opacity="0.2"/>
+        </pattern>
+        <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a2a3a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#2d4b5a;stop-opacity:1" />
+        </linearGradient>
+        <!-- 发光效果 -->
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
 
-  <!-- AI芯片图案 -->
-  <g transform="translate(180, 100)">
-    <rect x="-30" y="-30" width="100" height="100" rx="10" fill="#3eaf7c" opacity="0.1"/>
-    <path d="M-20 0h80M20 -20v80M0 -20v80M40 -20v80" stroke="#3eaf7c" stroke-width="2" opacity="0.3"/>
-    <path d="M-20 20h80M-20 40h80M-20 -20h80" stroke="#3eaf7c" stroke-width="2" opacity="0.3"/>
-    <!-- 中心点 -->
-    <circle cx="20" cy="20" r="5" fill="#3eaf7c"/>
-  </g>
-
-  <!-- 生长的小苗 -->
-  <g transform="translate(200, 250)">
-    <!-- 茎干 -->
-    <path d="M0 0c0-30 0-60 0-90" stroke="#42b983" stroke-width="4" stroke-linecap="round">
-      <animate attributeName="d" 
-               dur="3s"
-               values="M0 0c0-30 0-60 0-90;M0 0c-10-30 10-60 0-90;M0 0c0-30 0-60 0-90"
-               repeatCount="indefinite"/>
-    </path>
+    <!-- 渐变背景 -->
+    <rect width="800" height="400" fill="url(#bgGradient)"/>
     
-    <!-- 叶子 -->
-    <g>
-      <!-- 左叶 -->
-      <path d="M0 -40c-20-10 -25-20 -20-30s15-10 20-5" fill="#42b983">
-        <animate attributeName="d" 
-                 dur="3s"
-                 values="M0 -40c-20-10 -25-20 -20-30s15-10 20-5;M0 -40c-25-15 -30-25 -25-35s20-10 25-5;M0 -40c-20-10 -25-20 -20-30s15-10 20-5"
-                 repeatCount="indefinite"/>
-      </path>
-      <!-- 右叶 -->
-      <path d="M0 -40c20-10 25-20 20-30s-15-10 -20-5" fill="#42b983">
-        <animate attributeName="d" 
-                 dur="3s"
-                 values="M0 -40c20-10 25-20 20-30s-15-10 -20-5;M0 -40c25-15 30-25 25-35s-20-10 -25-5;M0 -40c20-10 25-20 20-30s-15-10 -20-5"
-                 repeatCount="indefinite"/>
-      </path>
+    <!-- 科技网格 -->
+    <rect width="800" height="400" fill="url(#grid)"/>
+
+    <!-- 装饰性圆环 -->
+    <circle cx="600" cy="100" r="60" stroke="#4DB6AC" stroke-width="2" fill="none" opacity="0.3"/>
+    <circle cx="200" cy="300" r="80" stroke="#81C784" stroke-width="2" fill="none" opacity="0.3"/>
+
+    <!-- 科技线条装饰 -->
+    <path d="M0 200 Q 200 150, 400 200 T 800 200" stroke="#64B5F6" stroke-width="2" fill="none" opacity="0.2"/>
+    <path d="M0 220 Q 200 170, 400 220 T 800 220" stroke="#4DB6AC" stroke-width="2" fill="none" opacity="0.2"/>
+
+    <!-- 主要植物元素 - 更大更突出的茁壮小苗 -->
+    <g transform="translate(350, 150)" filter="url(#glow)">
+        <!-- 茎干 -->
+        <path d="M0 200 C -20 150, 20 100, 0 50" stroke="#4CAF50" stroke-width="8" fill="none"/>
+        
+        <!-- 左侧叶子 -->
+        <path d="M0 150 C -40 130, -60 90, -40 60" stroke="#66BB6A" stroke-width="6" fill="none"/>
+        <path d="M-5 120 C -45 100, -65 60, -45 30" stroke="#81C784" stroke-width="6" fill="none"/>
+        
+        <!-- 右侧叶子 -->
+        <path d="M0 150 C 40 130, 60 90, 40 60" stroke="#66BB6A" stroke-width="6" fill="none"/>
+        <path d="M5 120 C 45 100, 65 60, 45 30" stroke="#81C784" stroke-width="6" fill="none"/>
+        
+        <!-- 顶部新芽 -->
+        <path d="M0 50 C -10 30, 10 30, 0 0" stroke="#A5D6A7" stroke-width="4" fill="none"/>
     </g>
-    
-    <!-- 顶部新芽 -->
-    <circle cx="0" cy="-90" r="8" fill="#4CAF50">
-      <animate attributeName="r"
-               dur="2s"
-               values="8;10;8"
-               repeatCount="indefinite"/>
-    </circle>
-  </g>
 
-  <!-- 数字连接线 -->
-  <g stroke="#3eaf7c" stroke-width="1" opacity="0.2">
-    <path d="M50 50l300 300" />
-    <path d="M350 50l-300 300" />
-    <path d="M200 0v400" />
-    <path d="M0 200h400" />
-  </g>
+    <!-- 装饰性科技元素 -->
+    <g opacity="0.6">
+        <!-- 数据流动效果 -->
+        <rect x="50" y="50" width="20" height="4" fill="#64B5F6">
+            <animate attributeName="x" from="50" to="730" dur="3s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="150" y="250" width="20" height="4" fill="#4DB6AC">
+            <animate attributeName="x" from="150" to="830" dur="4s" repeatCount="indefinite"/>
+        </rect>
+    </g>
 
-  <!-- 装饰性圆点 -->
-  <g fill="#42b983" opacity="0.3">
-    <circle cx="50" cy="50" r="4" />
-    <circle cx="350" cy="50" r="4" />
-    <circle cx="50" cy="350" r="4" />
-    <circle cx="350" cy="350" r="4" />
-  </g>
+    <!-- 点缀的小圆点 -->
+    <g>
+        <circle cx="100" cy="100" r="3" fill="#FFB74D"/>
+        <circle cx="700" cy="300" r="3" fill="#FFB74D"/>
+        <circle cx="200" cy="200" r="3" fill="#FFB74D"/>
+        <circle cx="600" cy="150" r="3" fill="#FFB74D"/>
+    </g>
+
+    <!-- 科技感六边形装饰 -->
+    <path d="M700 100 L720 110 L720 130 L700 140 L680 130 L680 110 Z" stroke="#4DB6AC" fill="none"/>
+    <path d="M100 300 L120 310 L120 330 L100 340 L80 330 L80 310 Z" stroke="#81C784" fill="none"/>
 </svg> 
