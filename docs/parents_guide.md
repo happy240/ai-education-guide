@@ -49,6 +49,35 @@
 
 </div>
 
+   
+### 2. 教育目标的转变
+
+<div style="display: flex; justify-content: space-between; gap: 20px;">
+
+<div style="flex: 1; padding: 20px; border: 1px solid #eee; border-radius: 8px; background: #fff;">
+<div style="font-weight: bold; margin-bottom: 10px; color: #333;">传统教育目标</div>
+<div style="color: #666;">
+
+- 知识传授为主
+- 标准答案导向  
+- 考试分数至上
+- 单一学科能力
+</div>
+</div>
+
+<div style="flex: 1; padding: 20px; border: 1px solid #eee; border-radius: 8px; background: #fff;">
+<div style="font-weight: bold; margin-bottom: 10px; color: #333;">AI时代教育目标</div>
+<div style="color: #666;">
+
+- 培养学习能力
+- 强调创新思维
+- 注重综合素质  
+- 跨学科融合
+</div>
+</div>
+
+</div>
+
 </div>
 
 #### 新型职业素养
@@ -99,34 +128,6 @@
    - 将提升表达能力作为重点
    - 把逻辑思维训练融入日常
    - 这些基础能力将终身受用
-   
-### 2. 教育目标的转变
-
-<div style="display: flex; justify-content: space-between; gap: 20px;">
-
-<div style="flex: 1; padding: 20px; border: 1px solid #eee; border-radius: 8px; background: #fff;">
-<div style="font-weight: bold; margin-bottom: 10px; color: #333;">传统教育目标</div>
-<div style="color: #666;">
-
-- 知识传授为主
-- 标准答案导向  
-- 考试分数至上
-- 单一学科能力
-</div>
-</div>
-
-<div style="flex: 1; padding: 20px; border: 1px solid #eee; border-radius: 8px; background: #fff;">
-<div style="font-weight: bold; margin-bottom: 10px; color: #333;">AI时代教育目标</div>
-<div style="color: #666;">
-
-- 培养学习能力
-- 强调创新思维
-- 注重综合素质  
-- 跨学科融合
-</div>
-</div>
-
-</div>
 
 ### 3. 不重视AI应用能力的潜在风险
 
