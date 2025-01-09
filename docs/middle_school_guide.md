@@ -822,3 +822,80 @@ AI是一个强大的学习助手，但记住它只是辅助工具。真正的学
 <div style="text-align: right; font-size: 0.8em; color: #888; margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee;">
 v1.0.0 | 2024-01-09
 </div> 
+
+## AI的工作原理 🔬
+
+### AI是如何学习的？
+想象一下神经网络就像是一个复杂的电路系统：
+
+```text
+🧠 AI学习的三个关键步骤：
+
+1. 数据输入
+   - 收集大量文本、图片等数据
+   - 对数据进行清理和标注
+   - 把数据转换成AI能理解的形式
+
+2. 模型训练
+   - 设计神经网络结构
+   - 通过大量练习调整参数
+   - 不断优化准确率
+
+3. 预测输出
+   - 接收新的问题
+   - 根据训练好的模型分析
+   - 生成合适的答案
+```
+
+### 为什么AI能这么快？⚡
+<div class="tech-card">
+  <div class="tech-title">AI的超级计算能力</div>
+  <div class="tech-content">
+    - 并行处理：同时进行多项运算
+    - 海量数据：训练数据量巨大
+    - 持续学习：不断更新知识库
+    - 快速迭代：可以快速尝试多种方案
+  </div>
+</div>
+
+### AI的局限性是什么？🤔
+```text
+需要注意的重要事项：
+
+1. 理解能力
+   - AI不真正理解意思
+   - 只是模式匹配和概率计算
+   - 可能产生错误答案
+
+2. 创造力
+   - 无法真正创新
+   - 只能基于已有知识组合
+   - 需要人类的创意引导
+
+3. 判断力
+   - 缺乏常识推理
+   - 不懂情感和道德
+   - 需要人类把关
+```
+
+<style>
+.tech-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tech-title {
+  font-weight: bold;
+  color: #3eaf7c;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+.tech-content {
+  color: #666;
+  line-height: 1.6;
+}
+</style> 

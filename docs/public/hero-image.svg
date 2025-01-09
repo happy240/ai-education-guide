@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆 -->
+  <circle cx="200" cy="200" r="180" fill="#f0f9ff"/>
+  
+  <!-- AI 符号 -->
+  <path d="M160 120h40v160h-40v-160z" fill="#3eaf7c"/>
+  <path d="M240 120h40v160h-40v-160z" fill="#3eaf7c"/>
+  <path d="M160 200h120v40h-120v-40z" fill="#3eaf7c"/>
+  
+  <!-- 教育元素：书本 -->
+  <path d="M120 260c0-11 9-20 20-20h160c11 0 20 9 20 20v20c0 11-9 20-20 20h-160c-11 0-20-9-20-20v-20z" fill="#42b983"/>
+  <path d="M140 280h160" stroke="#fff" stroke-width="4"/>
+  
+  <!-- 装饰元素 -->
+  <circle cx="200" cy="100" r="10" fill="#42b983"/>
+  <circle cx="160" cy="80" r="6" fill="#3eaf7c"/>
+  <circle cx="240" cy="80" r="6" fill="#3eaf7c"/>
+</svg> 
