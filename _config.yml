@@ -1,0 +1,14 @@
+title: AI教育应用指南
+description: 面向家长、教师和学生的AI应用指南
+theme: jekyll-theme-cayman
+markdown: kramdown
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default 
