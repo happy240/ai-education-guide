@@ -69,6 +69,38 @@ AI就像是一个聪明的电子朋友：
   </div>
 </div>
 
+### 问好问题的小秘诀
+<div class="tip-box">
+  <div class="tip-title">🌟 小提示</div>
+  <div class="tip-content">
+    想要AI给你好答案，
+    就要学会问好问题哦！
+    就像和老师说话一样，
+    问题越清楚，
+    答案就越准确！
+  </div>
+</div>
+
+<div class="example-card">
+  <div class="good-example">
+    <div class="example-title">👍 这样问很好：</div>
+    <div class="example-content">
+      "我是三年级学生，请帮我理解分数除法的意思"
+      "能用简单的话解释光合作用吗？"
+      "这道应用题我不会做，能一步步教我吗？"
+    </div>
+  </div>
+  
+  <div class="bad-example">
+    <div class="example-title">👎 这样问不好：</div>
+    <div class="example-content">
+      "这题怎么做？"（没说是什么题）
+      "我不懂"（没说不懂什么）
+      "全部告诉我"（问题太大了）
+    </div>
+  </div>
+</div>
+
 ## AI是什么？
 想象一下，AI就像是一个非常聪明的电子小伙伴：
 - 它可以回答你的问题
