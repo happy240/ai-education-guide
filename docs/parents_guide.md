@@ -1067,9 +1067,9 @@ AI技术是一把双刃剑，关键在于如何正确使用。希望本指南能
 - 重视实践和体验式学习
 - 培养多元化的学习方法 
 
-[^1]: World Economic Forum. (2025). The Future of Jobs Report 2025. https://www.weforum.org/publications/the-future-of-jobs-report-2025/ 
-[^2]: 教育学教授警告：随着AI能力增强，人们的工作和学习能力可能被摧毁. https://36kr.com/p/2421716877124612
-
 <div style="text-align: right; font-size: 0.8em; color: #888; margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee;">
 v1.0.0 | 2024-01-09
 </div> 
+
+[^1]: World Economic Forum. (2025). The Future of Jobs Report 2025. https://www.weforum.org/publications/the-future-of-jobs-report-2025/ 
+[^2]: 教育学教授警告：随着AI能力增强，人们的工作和学习能力可能被摧毁. https://36kr.com/p/2421716877124612
