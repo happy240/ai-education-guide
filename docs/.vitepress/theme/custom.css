@@ -173,4 +173,161 @@
 .dark button:hover,
 .dark .button:hover {
   background-color: var(--vp-c-brand-light);
+}
+
+/* 优化标题样式 */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6 {
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 2rem 0 1.2rem;
+  letter-spacing: -0.02em;
+}
+
+.vp-doc h1 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid var(--vp-c-brand);
+  padding-bottom: 0.5rem;
+}
+
+.vp-doc h2 {
+  font-size: 1.8rem;
+  border-bottom: 1px solid var(--vp-c-bg-mute);
+  padding-bottom: 0.3rem;
+}
+
+/* 优化段落间距和行高 */
+.vp-doc p {
+  line-height: 1.7;
+  margin: 1.2em 0;
+}
+
+/* 优化列表样式 */
+.vp-doc ul,
+.vp-doc ol {
+  padding-left: 1.5em;
+  line-height: 1.7;
+}
+
+.vp-doc li {
+  margin: 0.5em 0;
+}
+
+/* 优化引用块样式 */
+.vp-doc blockquote {
+  border-left: 4px solid var(--vp-c-brand);
+  margin: 1.5em 0;
+  padding: 0.8em 1em;
+  background-color: var(--vp-c-bg-soft);
+  border-radius: 0 4px 4px 0;
+}
+
+/* 优化代码块样式 */
+.vp-doc div[class*='language-'] {
+  border-radius: 8px;
+  margin: 1.5em 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 优化内联代码样式 */
+.vp-doc :not(pre) > code {
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  background-color: var(--vp-c-bg-soft);
+}
+
+/* 优化表格样式 */
+.vp-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.vp-doc th,
+.vp-doc td {
+  padding: 0.8em 1em;
+  border: 1px solid var(--vp-c-bg-mute);
+}
+
+.vp-doc th {
+  background-color: var(--vp-c-bg-soft);
+  font-weight: 600;
+}
+
+/* 优化链接样式 */
+.vp-doc a {
+  text-decoration: none;
+  border-bottom: 1px dashed var(--vp-c-brand);
+  transition: all 0.3s ease;
+}
+
+.vp-doc a:hover {
+  border-bottom: 1px solid var(--vp-c-brand);
+}
+
+/* 优化自定义容器样式 */
+.custom-block {
+  border-radius: 8px;
+  padding: 1em 1.5em;
+  margin: 1.5em 0;
+  border-left-width: 4px;
+  border-left-style: solid;
+}
+
+.custom-block.tip {
+  background-color: rgba(66, 211, 146, 0.1);
+  border-color: var(--vp-c-brand);
+}
+
+.custom-block.info {
+  background-color: rgba(73, 183, 157, 0.1);
+  border-color: var(--vp-c-brand-light);
+}
+
+.custom-block.warning {
+  background-color: rgba(255, 197, 23, 0.1);
+  border-color: #e7c000;
+}
+
+.custom-block.danger {
+  background-color: rgba(237, 60, 80, 0.1);
+  border-color: #e13238;
+}
+
+/* 访问统计样式 */
+#busuanzi_container_site_pv,
+#busuanzi_container_site_uv {
+  font-size: 0.9em;
+  color: var(--vp-c-text);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+#busuanzi_container_site_pv:hover,
+#busuanzi_container_site_uv:hover {
+  opacity: 1;
+}
+
+#busuanzi_value_site_pv,
+#busuanzi_value_site_uv {
+  font-weight: 600;
+  color: var(--vp-c-brand);
+}
+
+/* 确保页脚文本在暗色模式下可见 */
+.dark .VPFooter {
+  color: var(--vp-c-text);
+}
+
+.dark #busuanzi_container_site_pv,
+.dark #busuanzi_container_site_uv {
+  color: var(--vp-c-text);
 } 
