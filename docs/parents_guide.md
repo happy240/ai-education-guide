@@ -1300,6 +1300,8 @@ v1.0.0 | 2024-01-09
 
 [^5]: AI+费曼学习法，你就是下一代学神. https://www.toutiao.com/article/7416622163806929447/
 
+[^6]: 教育部关于加强中小学人工智能教育的通知. https://www.edu.cn/xxh/focus/zc/202412/t20241202_2644322.shtml
+
 <style>
 .skill-cards {
   display: flex;

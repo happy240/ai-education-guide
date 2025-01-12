@@ -1237,3 +1237,15 @@ v1.0.0 | 2024-01-09
 2. 突出重点内容
 3. 添加实例说明"
 ``` 
+
+[^1]: World Economic Forum. (2025). The Future of Jobs Report 2025. https://www.weforum.org/publications/the-future-of-jobs-report-2025/ 
+
+[^2]: 教育学教授警告：随着AI能力增强，人们的工作和学习能力可能被摧毁. https://36kr.com/p/2421716877124612
+
+[^3]: 费曼学习法：最好的学习方法是教别人. https://www.baike.com/wikiid/7414342862777876518
+
+[^4]: 最高效、最著名的学习方法——费曼学习法. https://m.sohu.com/a/835398656_100934/
+
+[^5]: AI+费曼学习法，你就是下一代学神. https://www.toutiao.com/article/7416622163806929447/
+
+[^6]: 教育部关于加强中小学人工智能教育的通知. https://www.edu.cn/xxh/focus/zc/202412/t20241202_2644322.shtml 
