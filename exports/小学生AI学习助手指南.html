@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <meta name="format-detection" content="telephone=no">
+  <title>小学生AI学习助手指南</title>
+  <style>
+/* 指南 · 微信/手机阅读专用样式（独立导出，不依赖 VitePress） */
+
+:root {
+  --accent: #22c55e;
+  --accent-soft: rgba(34, 197, 94, 0.12);
+  --accent-border: rgba(34, 197, 94, 0.35);
+  --text: #1f2937;
+  --text-muted: #4b5563;
+  --surface: #ffffff;
+  --surface-elevated: #f9fafb;
+  --warn-bg: #fffbeb;
+  --tip-bg: rgba(34, 197, 94, 0.08);
+  --radius-sm: 12px;
+  --radius-lg: 20px;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans CJK SC", "PingFang SC", "Microsoft YaHei", "WenQuanYi Zen Hei", sans-serif;
+  color: var(--text);
+  background: #f3f4f6;
+  line-height: 1.75;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.page {
+  max-width: 680px;
+  margin: 0 auto;
+  background: var(--surface);
+  padding: 1.25rem 1.1rem 2.5rem;
+}
+
+.export-header {
+  text-align: center;
+  padding: 1rem 0 1.25rem;
+  border-bottom: 2px dashed var(--accent-border);
+  margin-bottom: 1.5rem;
+}
+
+.export-header .badge {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: #15803d;
+  font-size: 0.8rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.export-header p {
+  margin: 0.35rem 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.content h1 {
+  font-size: 1.45rem;
+  line-height: 1.35;
+  color: var(--text);
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 1.2rem;
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent-border);
+  padding-bottom: 0.35rem;
+  margin: 2rem 0 1rem;
+  page-break-after: avoid;
+}
+
+.content h3 {
+  font-size: 1.05rem;
+  color: var(--text);
+  margin: 1.5rem 0 0.75rem;
+  page-break-after: avoid;
+}
+
+.content h4 {
+  font-size: 0.98rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.content p,
+.content li {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.content blockquote {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--accent);
+  margin: 1rem 0;
+  padding: 0.85rem 1rem;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--text-muted);
+}
+
+.content blockquote p {
+  margin: 0.35rem 0;
+}
+
+.content ul,
+.content ol {
+  padding-left: 1.35rem;
+  margin: 0.75rem 0;
+}
+
+.content pre,
+.content code {
+  font-family: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+  font-size: 0.88rem;
+}
+
+.content pre {
+  background: #f3f4f6;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border: 1px solid #e5e7eb;
+}
+
+.content strong {
+  color: #111827;
+}
+
+/* 组件样式 */
+.fun-container {
+  background: var(--accent-soft);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border: 2px dashed var(--accent-border);
+}
+
+.mascot {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.speech-bubble {
+  background: var(--surface-elevated);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  box-shadow: var(--shadow);
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.tip-box {
+  background: var(--warn-bg);
+  border: 1px solid rgba(234, 179, 8, 0.35);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  margin: 1rem 0;
+}
+
+.tip-box .tip-title {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #a16207;
+}
+
+.rule-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.rule-item {
+  background: var(--surface-elevated);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  box-shadow: var(--shadow);
+  border-top: 3px solid var(--accent);
+}
+
+.rule-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.rule-text {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.rule-examples {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.example-split,
+.example-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.example-good,
+.good-example {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+}
+
+.example-bad,
+.bad-example {
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+}
+
+.example-title {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  font-size: 0.92rem;
+}
+
+.example-good .example-title { color: #15803d; }
+.example-bad .example-title { color: #b91c1c; }
+
+.example-content {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.prompt-box {
+  background: #f9fafb;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 0.75rem 0.9rem;
+  margin: 0.65rem 0;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  word-break: break-word;
+}
+
+.flow-steps,
+.flow-steps .step-card {
+  margin: 0.75rem 0;
+}
+
+.step-card {
+  background: var(--surface-elevated);
+  border: 1px solid #e5e7eb;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  box-shadow: var(--shadow);
+}
+
+.step-title {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.45rem;
+  font-size: 0.95rem;
+}
+
+.step-content {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.flow-steps .arrow {
+  text-align: center;
+  color: var(--accent);
+  font-size: 1.1rem;
+  margin: 0.15rem 0;
+}
+
+.callout-tip {
+  background: var(--tip-bg);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.learning-card {
+  background: var(--surface-elevated);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: var(--shadow);
+}
+
+.learning-card .step {
+  background: #f3f4f6;
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 0.85rem;
+  margin: 0.65rem 0;
+}
+
+.learning-card .step-title {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+
+.teacher-tips,
+.parent-tips {
+  background: #f3f4f6;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  margin: 0.65rem 0;
+  border-left: 4px solid var(--accent);
+}
+
+.tool-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.tool-card {
+  background: var(--surface-elevated);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+}
+
+.tool-card-title {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.checklist-card {
+  background: var(--accent-soft);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  margin: 0.75rem 0;
+}
+
+.qa-list { margin: 1rem 0; }
+
+.qa-item {
+  background: var(--surface-elevated);
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  margin: 0.75rem 0;
+}
+
+.qa-item h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.98rem;
+  color: var(--accent);
+}
+
+.guide-meta {
+  text-align: right;
+  font-size: 0.82rem;
+  color: #9ca3af;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.export-footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media print {
+  body { background: #fff; }
+  .page { max-width: none; padding: 0; box-shadow: none; }
+  .export-header, .export-footer { page-break-inside: avoid; }
+  h2, h3, .step-card, .qa-item { page-break-inside: avoid; }
+}
+
+@media (min-width: 520px) {
+  .rule-card { grid-template-columns: repeat(3, 1fr); }
+  .example-split, .example-card { grid-template-columns: 1fr 1fr; }
+  .tool-grid { grid-template-columns: 1fr 1fr; }
+  .compare-cards, .skill-cards { grid-template-columns: 1fr 1fr; }
+}
+
+/* 家长指南主题 */
+.guide-parents {
+  --accent: #0891b2;
+  --accent-soft: rgba(8, 145, 178, 0.12);
+  --accent-border: rgba(8, 145, 178, 0.35);
+  --tip-bg: rgba(8, 145, 178, 0.08);
+}
+
+.guide-parents .export-header .badge {
+  color: #0e7490;
+}
+
+.guide-hero {
+  background: linear-gradient(135deg, var(--accent-soft) 0%, var(--surface) 100%);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.15rem;
+  margin: 1rem 0 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.guide-hero-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 0.65rem;
+}
+
+.guide-hero p:last-child {
+  margin-bottom: 0;
+}
+
+.compare-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.compare-card {
+  background: var(--surface-elevated);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  border: 1px solid #e5e7eb;
+}
+
+.compare-card-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.compare-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.skill-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.skill-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  box-shadow: var(--shadow);
+}
+
+.skill-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.skill-content {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.callout-warn {
+  background: var(--warn-bg);
+  border-left: 4px solid #ca8a04;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.callout-danger {
+  background: rgba(239, 68, 68, 0.06);
+  border-left: 4px solid #dc2626;
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.callout-title {
+  font-weight: 700;
+  margin: 0 0 0.45rem;
+  font-size: 0.95rem;
+}
+
+.callout-tip .callout-title { color: var(--accent); }
+.callout-warn .callout-title { color: #a16207; }
+.callout-danger .callout-title { color: #b91c1c; }
+
+.principle-card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid var(--accent-border);
+  box-shadow: var(--shadow);
+}
+
+.principle-section {
+  margin: 0.65rem 0;
+  padding: 0.75rem 0.85rem;
+  background: var(--surface-elevated);
+  border-radius: var(--radius-sm);
+}
+
+.principle-section h4 {
+  margin: 0 0 0.4rem;
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+.info-box {
+  background: var(--accent-soft);
+  border: 1px solid var(--accent-border);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  margin: 1rem 0;
+}
+
+.info-title {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: var(--accent);
+}
+
+.info-content {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.guide-table {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.guide-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.guide-table th,
+.guide-table td {
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem 0.65rem;
+  text-align: left;
+}
+
+.guide-table th {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+}
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="export-header">
+      <div class="badge">v2.0.0 · 2026-08-22</div>
+      <p>适合在手机微信中阅读 · 使用前请爸爸妈妈或老师陪同</p>
+      <p>可转发 PDF 到微信聊天，或用手机浏览器打开 HTML</p>
+    </div>
+    <article class="content guide-primary">
+<h1 id="小学生ai学习助手指南和ai做朋友">小学生AI学习助手指南：和AI做朋友 🌈</h1>
+<blockquote>
+<p>亲爱的小朋友，这本指南是专门为你准备的，它会帮助你： - 认识AI这个新朋友 - 学会正确使用AI学习 - 培养好的学习习惯 - 让学习变得更有趣</p>
+</blockquote>
+<h2 id="前言">前言</h2>
+
+<div class="fun-container">
+  <div class="mascot">🤖</div>
+  <div class="speech-bubble">
+    你好呀，小朋友！AI 现在不仅能打字聊天，还能看图、听声音——但它也会“编故事”，没有真正的心。记住：要和爸爸妈妈或老师<strong>一起</strong>用 AI，不要自己偷偷打开聊天写完整作业哦！
+  </div>
+</div>
+
+<div class="tip-box">
+  <div class="tip-title">重要规则（2025年学校规定）</div>
+  <div class="tip-content">
+    小学生不能<strong>独自</strong>用 AI 自由生成整篇作文或整道题的答案。可以请大人陪着问“思路”，作业还是要自己写！
+  </div>
+</div>
+
+<h2 id="如何和ai说话">如何和AI说话 🗨️</h2>
+<h3 id="基本原则">基本原则</h3>
+
+<div class="rule-card">
+  <div class="rule-item">
+    <div class="rule-icon">👋</div>
+    <div class="rule-text">说话要有礼貌</div>
+    <div class="rule-examples">
+      - "请帮我..."
+      - "谢谢你..."
+      - "能不能请你..."
+    </div>
+  </div>
+  
+  <div class="rule-item">
+    <div class="rule-icon">🎯</div>
+    <div class="rule-text">问题要清楚</div>
+    <div class="rule-examples">
+      - 说明你的年级
+      - 告诉AI你想学什么
+      - 说明你需要什么帮助
+    </div>
+  </div>
+  
+  <div class="rule-item">
+    <div class="rule-icon">🌱</div>
+    <div class="rule-text">要有耐心</div>
+    <div class="rule-examples">
+      - 一次只问一个问题
+      - 如果不明白可以再问
+      - 需要更多解释就说出来
+    </div>
+  </div>
+</div>
+
+<h2 id="认识你的ai小伙伴">认识你的AI小伙伴</h2>
+<p>AI 就像是一个聪明的电子朋友，但它<strong>没有真正的心</strong>： - 可以回答学习问题（在大人陪着的时候） - 可以帮你想词语，<strong>不能替你写整篇作文</strong> - 会看图、会说话，也可能<strong>说错或编造</strong> - 不能代替爸爸妈妈和老师给的温暖拥抱</p>
+<h3 id="生动的比喻">生动的比喻</h3>
+<pre class="text"><code>AI 就像是：
+🧠 超级记忆库：知道很多知识，但有时会记错
+📚 会说话的百科全书：要快，但要大人帮忙核对
+🤝 耐心的助手：在大人看着时使用
+⚠️ 不是真人朋友：难过时要找爸爸妈妈说</code></pre>
+<h3 id="问好问题的小秘诀">问好问题的小秘诀</h3>
+
+<div class="example-card">
+  <div class="good-example">
+    <div class="example-title">👍 这样问很好（爸爸妈妈在旁边）：</div>
+    <div class="example-content">
+      "我是三年级，请用简单话解释分数是什么意思"
+      "这道题我已经想过了，请只提示第一步"
+    </div>
+  </div>
+  
+  <div class="bad-example">
+    <div class="example-title">👎 这样问不好：</div>
+    <div class="example-content">
+      "帮我写完作文"（作业要自己做）
+      "全部告诉我答案"（要先动脑筋）
+    </div>
+  </div>
+</div>
+
+<h3 id="有趣的ai小实验需家长陪同">有趣的AI小实验（需家长陪同）</h3>
+
+<div class="prompt-box">「我们来玩猜谜语，请出适合二年级的谜语，我答对再出一题。谜语不要太难哦！」</div>
+
+<div class="prompt-box">「用讲睡前故事的方式，告诉我为什么叶子秋天会变黄。请用小朋友能懂的话，每段不超过 3 句话。」</div>
+
+<div class="prompt-box">「Let's play a simple English game! I'm learning animal words. Ask me one easy question, then teach me one new sentence. Please speak slowly.」</div>
+
+<h2 id="如何安全使用ai">如何安全使用AI？</h2>
+<h3 id="要记住的重要规则">要记住的重要规则：</h3>
+<ol type="1">
+<li><strong>必须</strong>告诉爸爸妈妈或老师，在大人陪着时使用</li>
+<li>不要独自打开 AI 聊天写完整作业（学校规定）</li>
+<li>不要告诉 AI 你的姓名、学校、地址</li>
+<li>不要完全相信 AI 的答案，要和大人对一对</li>
+<li>不要把 AI 当作唯一聊天玩伴；想说话找爸爸妈妈</li>
+<li>网上有些图片、视频、声音可能是假的（AI 做的），奇怪的内容马上告诉大人</li>
+</ol>
+<h3 id="安全使用小贴士">安全使用小贴士</h3>
+<pre class="text"><code>✅ 正确的做法：
+- 先自己想一想，再问 AI 要“提示”
+- 爸爸妈妈或老师看着你使用
+- 难过、害怕时找真人倾诉
+
+❌ 错误的做法：
+- 一个人偷偷用 AI 写作业
+- 告诉 AI 个人信息
+- 长时间和 AI 闲聊不休息</code></pre>
+<h2 id="ai怎么帮助我学习">AI怎么帮助我学习？</h2>
+<h3 id="写作文时">写作文时：</h3>
+<ul>
+<li>可以请 AI 帮你想几个好词（大人陪着）</li>
+<li>可以请大人用 AI 帮你看错别字</li>
+<li><strong>作文正文必须自己写</strong>，不能复制 AI 全文</li>
+</ul>
+<h4 id="写作文小帮手">写作文小帮手</h4>
+
+<div class="example-split">
+  <div class="example-good">
+    <div class="example-title">👍 这样问很好</div>
+    <div class="example-content">「我是三年级，要写《我的小狗》。请帮我想描写小狗样子的好词语，不要写整篇作文。」</div>
+  </div>
+  <div class="example-bad">
+    <div class="example-title">👎 这样问不好</div>
+    <div class="example-content">「帮我写完《我的小狗》」——作文要自己写，AI 只能帮你想词语。</div>
+  </div>
+</div>
+
+<div class="prompt-box">「我已经想好写小狗摇尾巴、陪我玩。请再给我 5 个描写动作的词语，不要写完整段落。」</div>
+
+<div class="prompt-box">「下面是我自己写的开头：[粘贴你的 2 句话]。请只帮我找错别字，不要重写。」</div>
+
+<p>如果还想更丰富，可以问：「能教我怎么把开头写得更有趣吗？只要给 1 个方法，不要代写。」</p>
+<h3 id="做数学题时">做数学题时：</h3>
+<ul>
+<li>先自己画图、列式</li>
+<li>实在不会再请大人陪着问“第一步怎么想”</li>
+<li>不要让 AI 直接给最终答案</li>
+</ul>
+<h4 id="数学学习小助手">数学学习小助手</h4>
+
+<div class="example-split">
+  <div class="example-good">
+    <div class="example-title">👍 这样问很好</div>
+    <div class="example-content">「我是三年级，1/4 + 2/4 我不会算。请用分苹果的例子解释，不要直接告诉我最终答案。」</div>
+  </div>
+  <div class="example-bad">
+    <div class="example-title">👎 这样问不好</div>
+    <div class="example-content">「这题答案是多少？」——要先自己想一想，只要提示。</div>
+  </div>
+</div>
+
+<div class="prompt-box">「请用苹果分块的例子解释：为什么 1/4 + 2/4 可以先加分子？不要给出其他题的答案。」</div>
+
+<div class="prompt-box">「我已经算出 1/4 + 2/4 = 3/4，请帮我检查思路对不对，并出 1 道类似的题让我自己做，不要附答案。」</div>
+
+<p>如果还不懂，可以问：「能用更简单的话再讲一遍吗？可以画 ASCII 小图说明吗？」</p>
+<h3 id="学英语时">学英语时：</h3>
+<ul>
+<li>和AI用简单的英语对话</li>
+<li>请AI解释单词的意思</li>
+<li>听AI读英语故事</li>
+<li>记住：要多练习说英语哦！</li>
+</ul>
+<h4 id="英语学习小游戏">英语学习小游戏</h4>
+
+<div class="example-split">
+  <div class="example-good">
+    <div class="example-title">👍 这样问很好</div>
+    <div class="example-content">「我想学动物单词。请用猜词游戏教我 3 个单词，我说中文你我说英文，不要一次给太多。」</div>
+  </div>
+  <div class="example-bad">
+    <div class="example-title">👎 这样问不好</div>
+    <div class="example-content">「教我英语」——太笼统，AI 不知道你想学什么。</div>
+  </div>
+</div>
+
+<div class="prompt-box">「Good morning! How are you? 请用简单英语回答我，并教我一句新句子。请慢慢说。」</div>
+
+<div class="prompt-box">「请讲一个 1 分钟的简单英语小故事，关于小猫咪。遇到难词请解释中文意思，不要整篇翻译。」</div>
+
+<p>听完后可以问：「刚才故事里的 cat 和 kitten 有什么不同？请用简单例子说明。」</p>
+<h2 id="和ai聊天的小技巧">和AI聊天的小技巧</h2>
+<h3 id="问问题的好方法">问问题的好方法</h3>
+<p>说明你是谁、想学什么、需要什么帮助——例如：「我是三年级，正在学分数，请用简单的话讲解。」</p>
+<h3 id="提问小示例">提问小示例</h3>
+<h4 id="数学学习">数学学习</h4>
+
+<div class="example-split">
+  <div class="example-good">
+    <div class="example-title">👍 这样问很好</div>
+    <div class="example-content">"亲爱的AI，我是三年级的小朋友，这道除法应用题我不太明白：[题目内容] 能帮我：1. 解释题目意思 2. 教我用画图解题 3. 告诉我解题步骤"</div>
+  </div>
+  <div class="example-bad">
+    <div class="example-title">👎 这样问不好</div>
+    <div class="example-content">"这题怎么做？"——没说是什么题，AI 不知道怎么帮你。</div>
+  </div>
+</div>
+
+<p>如果 AI 的解释你没听懂，可以继续问：“能用更简单的方法再讲一遍吗？”“可以举个生活中的例子吗？”“能画个图解释给我看吗？”</p>
+<h4 id="语文学习">语文学习</h4>
+
+<div class="example-split">
+  <div class="example-good">
+    <div class="example-title">👍 这样问很好</div>
+    <div class="example-content">"你好 AI 小老师，我要写一篇《我的小狗》的作文，能帮我：1. 想写什么内容 2. 教我用好词语 3. 告诉我怎么把故事写得生动"</div>
+  </div>
+  <div class="example-bad">
+    <div class="example-title">👎 这样问不好</div>
+    <div class="example-content">"帮我写作文"——这样不能提高自己的写作能力。</div>
+  </div>
+</div>
+
+<p>当 AI 给了建议后，你可以问：“能给我更多描写小狗的词语吗？”“可以教我写好开头吗？”“怎么把故事写得更有趣？”</p>
+<h4 id="英语学习">英语学习</h4>
+
+<div class="example-split">
+  <div class="example-good">
+    <div class="example-title">👍 这样问很好</div>
+    <div class="example-content">"AI 老师，我在学习动物单词，请你：1. 用有趣的方式教我记单词 2. 教我说简单句子 3. 和我玩英语小游戏"</div>
+  </div>
+  <div class="example-bad">
+    <div class="example-title">👎 这样问不好</div>
+    <div class="example-content">"教我英语"——没说想学什么，太笼统了。</div>
+  </div>
+</div>
+
+<p>可以这样和 AI 玩：“我们来玩角色扮演吧！”“能给我讲个英语小故事吗？”“教我唱个英文儿歌好吗？”</p>
+<h3 id="和-ai-对话小剧场">和 AI 对话小剧场</h3>
+<p><strong>请爸爸妈妈或老师坐在旁边。</strong> 下面 4 个小剧场，每一步都可以直接复制去问 AI。</p>
+<h4 id="小剧场-1除法应用题数学">小剧场 1：除法应用题（数学）</h4>
+
+<div class="flow-steps">
+  <div class="step-card">
+    <div class="step-title">第 1 问 · 只要第一步提示</div>
+    <div class="step-content">
+      <div class="prompt-box">「我是三年级，题目：24 个苹果平均分给 6 个小朋友，每人几个？我已经画了 6 个圈。请只提示第一步怎么想，不要给最终答案。」</div>
+    </div>
+    <div class="arrow">↓</div>
+  </div>
+  <div class="step-card">
+    <div class="step-title">第 2 问 · 听不懂再追问</div>
+    <div class="step-content">
+      <div class="prompt-box">「我还是不太懂。请用分糖果的例子再讲一遍，每次只讲一小步。」</div>
+    </div>
+    <div class="arrow">↓</div>
+  </div>
+  <div class="step-card">
+    <div class="step-title">第 3 步 · 关 AI 自己练</div>
+    <div class="step-content">关闭 AI，自己做一道「36 分 4 份」的题，再讲给爸爸妈妈听。</div>
+  </div>
+</div>
+
+<h4 id="小剧场-2描写小狗作文语文">小剧场 2：描写小狗作文（语文）</h4>
+
+<div class="flow-steps">
+  <div class="step-card">
+    <div class="step-title">第 1 问 · 帮想词语不代写</div>
+    <div class="step-content">
+      <div class="prompt-box">「我要写《我的小狗》，想写它跑、跳、摇尾巴。请给我 5 个描写动作的词语，不要写整篇作文。」</div>
+    </div>
+    <div class="arrow">↓</div>
+  </div>
+  <div class="step-card">
+    <div class="step-title">第 2 问 · 写好开头</div>
+    <div class="step-content">
+      <div class="prompt-box">「我想用‘有一天’开头，感觉太普通。请教 1 种更有趣的开头方法，不要帮我写完整句子。」</div>
+    </div>
+    <div class="arrow">↓</div>
+  </div>
+  <div class="step-card">
+    <div class="step-title">第 3 步 · 关 AI 自己写</div>
+    <div class="step-content">自己写 100 字，再请大人帮你看有没有错别字。</div>
+  </div>
+</div>
+
+<h4 id="小剧场-3动物单词英语">小剧场 3：动物单词（英语）</h4>
+
+<div class="flow-steps">
+  <div class="step-card">
+    <div class="step-title">第 1 问 · 猜词游戏</div>
+    <div class="step-content">
+      <div class="prompt-box">「Let's play a guessing game! I'm learning animal words. Describe one animal in simple English, I will guess. Don't tell me the answer directly.」</div>
+    </div>
+    <div class="arrow">↓</div>
+  </div>
+  <div class="step-card">
+    <div class="step-title">第 2 问 · 学一句新话</div>
+    <div class="step-content">
+      <div class="prompt-box">「I guessed 'cat'! Please teach me one simple sentence: 'The cat is cute.' and explain each word.」</div>
+    </div>
+    <div class="arrow">↓</div>
+  </div>
+  <div class="step-card">
+    <div class="step-title">第 3 步 · 关 AI 自己说</div>
+    <div class="step-content">不用 AI，用英语向爸爸妈妈介绍你最喜欢的动物。</div>
+  </div>
+</div>
+
+<h4 id="小剧场-4天空为什么是蓝色科学探索">小剧场 4：天空为什么是蓝色（科学探索）</h4>
+
+<div class="flow-steps">
+  <div class="step-card">
+    <div class="step-title">第 1 问 · 故事化讲解</div>
+    <div class="step-content">
+      <div class="prompt-box">「为什么天空是蓝色的？请像讲故事一样解释，用二年级能懂的话，不要超过 5 句话。」</div>
+    </div>
+    <div class="arrow">↓</div>
+  </div>
+  <div class="step-card">
+    <div class="step-title">第 2 问 · 更简单再说一遍</div>
+    <div class="step-content">
+      <div class="prompt-box">「我还是有点不懂。请用更简单的话再说一遍，并举一个生活中的例子。」</div>
+    </div>
+    <div class="arrow">↓</div>
+  </div>
+  <div class="step-card">
+    <div class="step-title">第 3 步 · 关 AI 自己讲</div>
+    <div class="step-content">用自己的话讲给爸爸妈妈听，请他们帮你在课本或百科里核对。</div>
+  </div>
+</div>
+
+<div class="callout-tip">
+  记住：先自己想一想，再向 AI 要「提示」；获得帮助后自己动手完成；和爸爸妈妈分享你学到的知识。不要只说「不会」，也不要要 AI 直接给答案。
+</div>
+
+<h3 id="学习小帮手">学习小帮手</h3>
+<h4 id="预习新课">预习新课</h4>
+<p>可以这样问：「明天要学 [课程名称]，能说说这课大概讲什么？有哪些重要知识点？不要出完整习题答案。」</p>
+
+<div class="prompt-box">「明天要学《植物的生长》，请用 3 句话告诉我这课大概讲什么，并告诉我可以准备什么观察材料。不要代写作业。」</div>
+
+<h4 id="复习功课">复习功课</h4>
+<p><strong>先自己做题，再请 AI 检查</strong>——不要先看答案。</p>
+
+<div class="prompt-box">「我想复习二年级数学加减法。请先出 3 道题让我自己做，不要附答案。我做完后再请你帮我检查。」</div>
+
+<h4 id="提高兴趣">提高兴趣</h4>
+
+<div class="prompt-box">「能不能用讲故事的方式，告诉我『分数』在生活中有什么用？举 2 个生活中的例子，不要出计算题答案。」</div>
+
+<h2 id="有趣的学习方式">有趣的学习方式</h2>
+<h3 id="和ai玩问答游戏">和AI玩问答游戏：</h3>
+<ul>
+<li>问AI有趣的科学知识</li>
+<li>让AI给你出趣味谜语</li>
+<li>和AI一起复习功课</li>
+</ul>
+<h4 id="趣味学习案例">趣味学习案例</h4>
+
+<div class="prompt-box">「我们来玩科学问答：为什么天空是蓝色的？请用简单有趣的方式解释，答完后给我出 1 个相关问题让我思考。」</div>
+
+<div class="prompt-box">「请出一个适合二年级的谜语，我答对再出一题。例如：什么东西越削越大？（答案：洞）」</div>
+
+<div class="prompt-box">「和我玩知识竞赛：每次出 1 道二年级科学题，我答对得 1 分，答错请提示不要直接给答案。」</div>
+
+<h3 id="探索新知识">探索新知识：</h3>
+<ul>
+<li>问AI关于自然的问题</li>
+<li>了解历史小故事</li>
+<li>学习新的知识</li>
+</ul>
+<h4 id="知识探索示例">知识探索示例</h4>
+
+<div class="prompt-box">「为什么鸟儿会飞？请用讲故事的方式解释，并告诉我 1 个和飞机有关的有趣小知识。不要超过 6 句话。」</div>
+
+<div class="prompt-box">「请讲一个关于孔子的简单历史小故事，要有趣、有教育意义，适合小学生。讲完后问我 1 个问题检查我有没有听懂。」</div>
+
+<h2 id="注意事项">注意事项</h2>
+<ol type="1">
+<li>每天使用AI的时间不要太长</li>
+<li>多和爸爸妈妈交流学习情况</li>
+<li>遇到不懂的问题要问老师或家长</li>
+<li>记住AI只是帮手，要培养自己独立思考的能力</li>
+</ol>
+<h3 id="时间管理小贴士">时间管理小贴士</h3>
+<pre class="text"><code>📅 每天的AI学习时间安排：
+- 写作文帮助：15分钟
+- 数学题辅导：15分钟
+- 英语对话：10分钟
+- 知识探索：10分钟
+
+记住：学习时间不要超过这个范围哦！</code></pre>
+<h2 id="学习效果检查表">学习效果检查表</h2>
+<pre class="text"><code>每天完成学习后，检查一下：
+□ 今天学到了什么新知识？
+□ 是否自己先思考后再问AI？
+□ 和爸爸妈妈分享了学习内容吗？
+□ 有什么不明白的地方需要问大人吗？</code></pre>
+<h2 id="小贴士">小贴士</h2>
+<ul>
+<li>使用AI时要有礼貌</li>
+<li>问问题要清楚明白</li>
+<li>不懂的地方要勇于提问</li>
+<li>记得和爸爸妈妈分享你学到的新知识</li>
+</ul>
+<h2 id="学习小秘诀">学习小秘诀</h2>
+
+<div class="learning-card">
+  <div class="step">
+    <div class="step-icon">🎯</div>
+    <div class="step-title">循序渐进</div>
+    <div class="step-content">
+      - 先易后难
+      - 一步一步来  
+      - 不懂就问
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-icon">🤔</div>
+    <div class="step-title">主动思考</div>
+    <div class="step-content">
+      - 先自己想
+      - 再问AI
+      - 最后复习
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-icon">✍️</div>
+    <div class="step-title">学习方法</div>
+    <div class="step-content">
+      - 多动手
+      - 多练习
+      - 多分享
+    </div>
+  </div>
+</div>
+
+<h2 id="和老师家长一起学习">和老师、家长一起学习 🌟</h2>
+<h3 id="听老师的话">听老师的话</h3>
+
+<div class="teacher-tips">
+  <div class="tip-title">👨‍🏫 在课堂上：</div>
+  <div class="tip-content">
+    - 按照老师说的方法使用AI
+    - 遇到不懂的要举手提问
+    - 和同学们一起讨论学习心得
+  </div>
+</div>
+
+<div class="teacher-tips">
+  <div class="tip-title">📚 做作业时：</div>
+  <div class="tip-content">
+    - 先自己认真思考
+    - 实在不会再问AI
+    - 把AI帮助过的地方告诉老师
+  </div>
+</div>
+
+<h3 id="和爸爸妈妈一起学">和爸爸妈妈一起学</h3>
+
+<div class="parent-tips">
+  <div class="tip-title">🏠 在家里：</div>
+  <div class="tip-content">
+    - 和爸爸妈妈一起定使用时间
+    - 遇到问题先问爸爸妈妈
+    - 分享学到的新知识
+  </div>
+</div>
+
+<div class="parent-tips">
+  <div class="tip-title">🤝 一起进步：</div>
+  <div class="tip-content">
+    - 和爸爸妈妈一起探索AI
+    - 遵守约定好的规则
+    - 学会感恩和分享
+  </div>
+</div>
+
+<h2 id="认识不同的ai小伙伴需大人同意才能用">认识不同的AI小伙伴（需大人同意才能用）</h2>
+
+<div class="tool-grid">
+  <div class="tool-card">
+    <div class="tool-card-title">学习 App</div>
+    <ul>
+      <li>作业帮、洪恩等：在大人同意下查思路</li>
+      <li>小猿口算：练习计算</li>
+    </ul>
+  </div>
+  <div class="tool-card">
+    <div class="tool-card-title">大人设备里的助手</div>
+    <ul>
+      <li>豆包、小度、Siri 等</li>
+      <li>只能在大人陪着时问学习问题</li>
+    </ul>
+  </div>
+</div>
+
+<div class="callout-tip">
+  不要自己注册很多 AI 账号；用哪个先问爸爸妈妈！
+</div>
+
+<h2 id="结束语">结束语</h2>
+<p>亲爱的小朋友，希望你能和AI好好相处，让它成为你学习路上的好帮手。记住，最重要的是要自己动脑思考，AI只是来帮助你的！</p>
+<h3 id="小小约定">小小约定</h3>
+
+<div class="checklist-card">
+
+- □ 认真学习
+- □ 快乐成长
+- □ 善用AI
+- □ 多多思考
+
+</div>
+
+<p>祝你学习进步，天天开心！</p>
+<h2 id="小朋友常见问题解答">小朋友常见问题解答</h2>
+
+<div class="qa-list">
+
+<div class="qa-item">
+
+### Q1：AI是什么？它能做什么？
+AI就像是一个聪明的电脑助手：
+- 可以回答你的问题
+- 帮你检查作业中的错误
+- 给你讲故事和解释知识
+- 陪你练习英语对话
+- 帮你设计有趣的游戏
+
+但要记住，AI也会犯错，所以要学会分辨对错哦！
+
+</div>
+
+<div class="qa-item">
+
+### Q2：我可以让AI帮我写作业吗？
+关于作业，要记住这些重要的事：
+- 作业要自己动手完成
+- 可以请AI解释你不懂的题目
+- 做完后可以让AI帮你检查
+- 遇到难题先自己思考
+- 有问题要及时问老师
+
+</div>
+
+<div class="qa-item">
+
+### Q3：怎么和AI说话它才能听懂？
+和AI交流的小技巧：
+- 用简单清楚的话
+- 一次只问一个问题
+- 如果听不懂可以换个说法
+- 要有礼貌地提问
+- 记得说"谢谢"哦
+
+</div>
+
+<div class="qa-item">
+
+### Q4：AI说的话都对吗？
+AI也会犯错，所以要记住：
+- 不要完全相信AI的答案
+- 要和课本内容对比
+- 不懂的地方问老师
+- 多和同学讨论
+- 培养自己判断对错的能力
+
+</div>
+
+<div class="qa-item">
+
+### Q5：使用AI时要注意什么？
+安全使用AI的小贴士：
+- 要告诉爸爸妈妈你在用AI
+- 不要告诉AI你的个人信息
+- 遇到奇怪的内容要告诉大人
+- 不要一直用AI，要注意休息
+- 记得保护眼睛哦
+
+</div>
+
+<div class="qa-item">
+
+### Q6：AI能代替老师和家长吗？
+AI是好帮手，但是：
+- 老师和家长的话更重要
+- AI不能给你温暖的抱抱
+- 和真人交流更有趣
+- AI不能完全理解你的感受
+- 要多和家人朋友互动
+
+</div>
+
+<div class="qa-item">
+
+### Q7：遇到不会用的时候怎么办？
+别着急，试试这些方法：
+- 问问爸爸妈妈怎么用
+- 让老师帮你解释
+- 和同学一起学习
+- 慢慢来，不要着急
+- 多练习就会用了
+
+</div>
+
+</div>
+
+<div class="guide-meta">v2.0.0 | 2026-08-22</div>
+    </article>
+    <div class="export-footer">
+      <strong>微信中使用方式</strong><br>
+      1. 将 PDF 文件发送到微信聊天，点击即可全屏阅读；<br>
+      2. 或将 HTML 文件发送到「文件传输助手」，用手机浏览器打开；<br>
+      3. 阅读时双指缩放即可调整字号；对比卡片建议横屏查看。
+    </div>
+  </div>
+</body>
+</html>

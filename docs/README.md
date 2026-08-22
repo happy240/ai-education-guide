@@ -24,6 +24,26 @@
 4. 本地预览：`npm run docs:dev`
 5. 构建站点：`npm run docs:build`
 
+## 导出指南（微信阅读版）
+
+将中文指南导出为适合手机微信阅读的 HTML / PDF：
+
+```bash
+npm run export:wechat          # 小学生 + 家长
+npm run export:primary-wechat  # 仅小学生
+npm run export:parents-wechat  # 仅家长
+```
+
+输出目录：[`exports/`](../exports/)
+
+| 文件 | 说明 |
+| --- | --- |
+| `小学生AI学习助手指南.pdf` | 发到微信聊天中直接阅读 |
+| `家长AI应用指南.pdf` | 家长群分享推荐 |
+| `*.html` | 手机浏览器打开，便于复制提示词 |
+
+PDF 生成需安装 WeasyPrint：`pip install weasyprint`；系统还需 `pandoc`。
+
 ## 贡献指南
 1. Fork 本仓库
 2. 创建新的分支：`git checkout -b feature/your-feature`

@@ -5,7 +5,10 @@
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
+    "docs:serve": "vitepress serve docs",
+    "export:primary-wechat": "python3 scripts/export-guide-wechat.py --guide primary",
+    "export:parents-wechat": "python3 scripts/export-guide-wechat.py --guide parents",
+    "export:wechat": "python3 scripts/export-guide-wechat.py --guide all"
   },
   "keywords": ["AI", "education", "guide"],
   "author": "",
