@@ -17,11 +17,12 @@
 3. 提交Pull Request参与内容改进
 
 ## 本地开发
-1. 安装Jekyll环境
+
+1. 安装 Node.js 18+
 2. 克隆仓库：`git clone [仓库地址]`
-3. 进入项目目录：`cd [项目目录]`
-4. 安装依赖：`bundle install`
-5. 本地预览：`bundle exec jekyll serve`
+3. 进入项目目录：`npm install`
+4. 本地预览：`npm run docs:dev`
+5. 构建站点：`npm run docs:build`
 
 ## 贡献指南
 1. Fork 本仓库

@@ -35,15 +35,16 @@ features:
 
 ---
 
-<div class="custom-container tip">
-  <p class="custom-container-title">🌟 探索 AI 新时代</p>
-  <p>在这个人工智能日新月异的时代，我们见证着技术与教育的深度融合。与人类儿童的成长不同，AI的进化速度令人惊叹——它们在几个月内就能完成人类需要数年才能达到的认知发展。正是这种前所未有的快速迭代，让我们必须认真思考如何在教育领域应对这一变革。</p>
+<div class="guide-hero">
+  <p class="guide-hero-title">探索 AI 新时代（2026 修订）</p>
+  <p>2025—2026 年，国家相继发布中小学人工智能通识教育与生成式 AI 使用指南，以及《“人工智能+教育”行动计划》。AI 已能看图、听声、读长文档并分步推理——教育重点从“会不会用工具”转向“能否独立思考、验证信息、与人协作”。</p>
 </div>
 
 ## 写在前面的话
 
-<div class="custom-container info">
-  <p>本指南源于对这个变革时代的思考，由作者与AI携手创作，希望能为每一位正在探索AI教育之路的同行者带来启发。我们需要重新思考教育的本质：在AI能力快速超越人类的某些领域时，我们应该培养学生什么样的能力？如何让教育跟上AI发展的脚步？</p>
+<div class="callout-tip">
+  <p class="callout-title">关于本指南 v2.0</p>
+  <p>在 2024 年初版基础上修订：更新政策与工具生态，补充认知卸载、幻觉、深度伪造与学术诚信等内容，并与《中小学生成式人工智能使用指南（2025年版）》的分学段要求对齐。内容由作者与 AI 协作编写，欢迎通过 GitHub 参与改进。</p>
 </div>
 
 这是一份对未来的思考，也是一次知识的探索之旅。在这里，我们一起探讨如何在AI时代重新定义学习，如何让技术成为知识获取的得力助手，以及如何在人机协作中找到最佳的平衡点。
@@ -63,37 +64,4 @@ features:
 
 让我们携手描绘AI教育的美好愿景，共同开启这段充满可能的未来之旅。
 
-<style>
-.custom-container {
-  padding: 1rem;
-  border-radius: 8px;
-  margin: 1rem 0;
-}
-.tip {
-  background-color: #f3f5f7;
-  border-left: 5px solid #42b983;
-}
-.info {
-  background-color: #f8f8f8;
-  border-left: 5px solid #3eaf7c;
-}
-.details {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-}
-.custom-container-title {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-.details ul {
-  list-style: none;
-  padding-left: 1rem;
-}
-.details li {
-  margin: 0.5rem 0;
-}
-</style>
-
-<div style="text-align: right; font-size: 0.8em; color: #888; margin-top: 50px; padding-top: 20px; border-top: 1px solid #eee;">
-v1.0.0 | 2024-01-09
-</div> 
+<div class="guide-meta">v2.0.0 | 2026-08-22</div> 

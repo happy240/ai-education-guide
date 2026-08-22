@@ -11,12 +11,17 @@ document.addEventListener('DOMContentLoaded', function() {
         </span>
     `;
     
-    // 找到版本信息的div
-    const versionDiv = document.querySelector('div[style*="text-align: right"][style*="font-size: 0.8em"]');
-    if (versionDiv) {
-        // 在版本信息前插入阅读量统计
-        versionDiv.insertBefore(viewContainer, versionDiv.firstChild);
+    // 找到版本信息的 div
+    const versionDiv = document.querySelector('.guide-meta');
+    if (!versionDiv) {
+        const fallback = document.querySelector('div[style*="text-align: right"][style*="font-size: 0.8em"]');
+        if (fallback) {
+            fallback.classList.add('guide-meta');
+            fallback.insertBefore(viewContainer, fallback.firstChild);
+        }
+        return;
     }
+    versionDiv.insertBefore(viewContainer, versionDiv.firstChild);
 });
 
 // 为hero-image添加鼠标互动效果

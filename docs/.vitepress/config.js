@@ -32,7 +32,7 @@ export default {
               访客数 <span id="busuanzi_value_site_uv"></span> 人
             </span>
           `,
-          copyright: 'Copyright © 2024'
+          copyright: 'Copyright © 2024–2026'
         },
         docFooter: {
           prev: '上一页',
@@ -73,7 +73,7 @@ export default {
               Unique Visitors: <span id="busuanzi_value_site_uv"></span>
             </span>
           `,
-          copyright: 'Copyright © 2024'
+          copyright: 'Copyright © 2024–2026'
         },
         docFooter: {
           prev: 'Previous Page',

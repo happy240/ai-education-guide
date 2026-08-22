@@ -330,4 +330,699 @@
 .dark #busuanzi_container_site_pv,
 .dark #busuanzi_container_site_uv {
   color: var(--vp-c-text);
-} 
+}
+
+/* ============================================================
+   AI 教育指南 — 设计系统
+   ============================================================ */
+
+.guide-page {
+  --guide-radius-sm: 8px;
+  --guide-radius-lg: 16px;
+  --guide-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --guide-shadow-hover: 0 8px 28px rgba(0, 0, 0, 0.1);
+  --guide-accent: var(--vp-c-brand);
+  --guide-accent-soft: rgba(62, 175, 124, 0.12);
+  --guide-accent-border: rgba(62, 175, 124, 0.35);
+  --guide-surface: var(--vp-c-bg-soft);
+  --guide-surface-elevated: var(--vp-c-bg);
+  --guide-text-muted: rgba(44, 62, 80, 0.72);
+  --guide-callout-tip-bg: rgba(62, 175, 124, 0.1);
+  --guide-callout-warn-bg: rgba(234, 179, 8, 0.12);
+  --guide-callout-danger-bg: rgba(239, 68, 68, 0.1);
+}
+
+.dark .guide-page {
+  --guide-text-muted: rgba(245, 245, 245, 0.72);
+  --guide-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  --guide-accent-soft: rgba(66, 211, 146, 0.15);
+  --guide-accent-border: rgba(66, 211, 146, 0.35);
+  --guide-callout-tip-bg: rgba(66, 211, 146, 0.12);
+  --guide-callout-warn-bg: rgba(234, 179, 8, 0.15);
+  --guide-callout-danger-bg: rgba(239, 68, 68, 0.15);
+}
+
+/* 读者主题 */
+.guide-teachers {
+  --guide-accent: #0d9488;
+  --guide-accent-soft: rgba(13, 148, 136, 0.12);
+  --guide-accent-border: rgba(13, 148, 136, 0.35);
+}
+
+.guide-parents {
+  --guide-accent: #0891b2;
+  --guide-accent-soft: rgba(8, 145, 178, 0.12);
+  --guide-accent-border: rgba(8, 145, 178, 0.35);
+}
+
+.guide-middle {
+  --guide-accent: #6366f1;
+  --guide-accent-soft: rgba(99, 102, 241, 0.12);
+  --guide-accent-border: rgba(99, 102, 241, 0.35);
+}
+
+.guide-primary {
+  --guide-accent: #22c55e;
+  --guide-accent-soft: rgba(34, 197, 94, 0.12);
+  --guide-accent-border: rgba(34, 197, 94, 0.35);
+  --guide-radius-sm: 12px;
+  --guide-radius-lg: 20px;
+}
+
+.guide-home {
+  --guide-accent: var(--vp-c-brand);
+}
+
+.guide-primary .vp-doc {
+  font-size: 1.05rem;
+}
+
+.guide-primary .vp-doc h2 {
+  color: var(--guide-accent);
+  border-bottom-color: var(--guide-accent-border);
+}
+
+/* 页面导语 */
+.guide-hero {
+  background: linear-gradient(135deg, var(--guide-accent-soft) 0%, var(--guide-surface) 100%);
+  border: 1px solid var(--guide-accent-border);
+  border-radius: var(--guide-radius-lg);
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0 2rem;
+  box-shadow: var(--guide-shadow);
+}
+
+.guide-hero-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--guide-accent);
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.guide-hero p:last-child {
+  margin-bottom: 0;
+}
+
+/* 版本与阅读量 */
+.guide-meta {
+  text-align: right;
+  font-size: 0.85em;
+  color: var(--guide-text-muted);
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--vp-c-bg-mute);
+}
+
+.dark .guide-meta {
+  color: #aaa;
+}
+
+/* 提示块 */
+.callout-tip,
+.callout-warn,
+.callout-danger {
+  border-radius: var(--guide-radius-sm);
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  border-left: 4px solid;
+  line-height: 1.7;
+}
+
+.callout-tip {
+  background: var(--guide-callout-tip-bg);
+  border-left-color: var(--guide-accent);
+}
+
+.callout-warn {
+  background: var(--guide-callout-warn-bg);
+  border-left-color: #ca8a04;
+}
+
+.callout-danger {
+  background: var(--guide-callout-danger-bg);
+  border-left-color: #dc2626;
+}
+
+.callout-title {
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.callout-tip .callout-title { color: var(--guide-accent); }
+.callout-warn .callout-title { color: #a16207; }
+.callout-danger .callout-title { color: #b91c1c; }
+
+.dark .callout-warn .callout-title { color: #fbbf24; }
+.dark .callout-danger .callout-title { color: #f87171; }
+
+/* 政策卡片网格 */
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.policy-card {
+  background: var(--guide-surface-elevated);
+  border: 1px solid var(--guide-accent-border);
+  border-radius: var(--guide-radius-sm);
+  padding: 1.25rem;
+  box-shadow: var(--guide-shadow);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.policy-card:hover {
+  box-shadow: var(--guide-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.policy-card-year {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--guide-accent);
+  background: var(--guide-accent-soft);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.6rem;
+}
+
+.policy-card h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--vp-c-text);
+}
+
+.policy-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--guide-text-muted);
+  line-height: 1.6;
+}
+
+/* 清单卡片 */
+.checklist-card {
+  background: var(--guide-surface);
+  border: 1px solid var(--guide-accent-border);
+  border-radius: var(--guide-radius-sm);
+  padding: 1.25rem 1.5rem;
+  margin: 1.25rem 0;
+}
+
+.checklist-card ol,
+.checklist-card ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+/* 工具网格 */
+.tool-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.tool-card {
+  background: var(--guide-surface-elevated);
+  border: 1px solid var(--vp-c-bg-mute);
+  border-top: 3px solid var(--guide-accent);
+  border-radius: var(--guide-radius-sm);
+  padding: 1rem 1.15rem;
+  box-shadow: var(--guide-shadow);
+}
+
+.tool-card-title {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem;
+  color: var(--guide-accent);
+}
+
+.tool-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: var(--guide-text-muted);
+}
+
+.tool-card li {
+  margin: 0.35rem 0;
+}
+
+/* 步骤流 */
+.step-flow,
+.flow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.step-card {
+  background: var(--guide-surface-elevated);
+  border: 1px solid var(--vp-c-bg-mute);
+  border-left: 4px solid var(--guide-accent);
+  border-radius: var(--guide-radius-sm);
+  padding: 1rem 1.25rem;
+  position: relative;
+  box-shadow: var(--guide-shadow);
+}
+
+.step-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--guide-accent);
+}
+
+.step-content {
+  color: var(--guide-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.flow-steps .arrow {
+  text-align: center;
+  color: var(--guide-accent);
+  font-size: 1.25rem;
+  margin: 0.25rem 0;
+}
+
+/* 技能卡片 */
+.skill-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.skill-card {
+  background: var(--guide-surface-elevated);
+  border: 1px solid var(--guide-accent-border);
+  border-radius: var(--guide-radius-sm);
+  padding: 1.25rem;
+  box-shadow: var(--guide-shadow);
+}
+
+.skill-title {
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--guide-accent);
+}
+
+.skill-content {
+  color: var(--guide-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* 对比双栏 */
+.compare-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.compare-card {
+  background: var(--guide-surface-elevated);
+  border-radius: var(--guide-radius-sm);
+  padding: 1.25rem;
+  border: 1px solid var(--vp-c-bg-mute);
+}
+
+.compare-card-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.75rem;
+  color: var(--guide-accent);
+}
+
+.compare-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--guide-text-muted);
+}
+
+/* 示例对比 */
+.example-split,
+.example-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.example-good,
+.good-example {
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: var(--guide-radius-sm);
+  padding: 1rem 1.15rem;
+}
+
+.example-bad,
+.bad-example {
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  border-radius: var(--guide-radius-sm);
+  padding: 1rem 1.15rem;
+}
+
+.example-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.example-good .example-title { color: #15803d; }
+.example-bad .example-title { color: #b91c1c; }
+
+.dark .example-good .example-title { color: #4ade80; }
+.dark .example-bad .example-title { color: #f87171; }
+
+.example-content {
+  font-size: 0.92rem;
+  color: var(--guide-text-muted);
+  line-height: 1.6;
+}
+
+/* 提示词框 */
+.prompt-box {
+  background: var(--guide-surface);
+  border-left: 4px solid var(--guide-accent);
+  border-radius: 0 var(--guide-radius-sm) var(--guide-radius-sm) 0;
+  padding: 0.85rem 1.15rem;
+  margin: 0.75rem 0;
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--vp-c-text);
+}
+
+/* Q&A */
+.qa-list {
+  margin: 1.5rem 0;
+}
+
+.qa-item {
+  background: var(--guide-surface-elevated);
+  border: 1px solid var(--vp-c-bg-mute);
+  border-radius: var(--guide-radius-sm);
+  padding: 1.15rem 1.35rem;
+  margin: 1rem 0;
+  box-shadow: var(--guide-shadow);
+}
+
+.qa-item h3 {
+  margin: 0 0 0.65rem !important;
+  font-size: 1.05rem !important;
+  color: var(--guide-accent) !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.qa-item p:last-child {
+  margin-bottom: 0;
+}
+
+/* 增强表格 */
+.guide-table {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  border-radius: var(--guide-radius-sm);
+  box-shadow: var(--guide-shadow);
+  border: 1px solid var(--guide-accent-border);
+}
+
+.guide-table table {
+  margin: 0;
+  box-shadow: none;
+}
+
+.guide-table th {
+  background: var(--guide-accent-soft) !important;
+  color: var(--guide-accent) !important;
+  font-weight: 700;
+}
+
+/* 原理卡片 */
+.principle-card {
+  background: var(--guide-surface);
+  border-radius: var(--guide-radius-lg);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border: 1px solid var(--guide-accent-border);
+  box-shadow: var(--guide-shadow);
+}
+
+.principle-section {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--guide-surface-elevated);
+  border-radius: var(--guide-radius-sm);
+}
+
+.principle-section h4 {
+  margin: 0 0 0.5rem;
+  color: var(--guide-accent);
+}
+
+.info-box {
+  background: var(--guide-accent-soft);
+  border: 1px solid var(--guide-accent-border);
+  border-radius: var(--guide-radius-sm);
+  padding: 1.25rem;
+  margin: 1.25rem 0;
+}
+
+.info-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--guide-accent);
+}
+
+.info-content {
+  color: var(--guide-text-muted);
+}
+
+/* 首页 custom-container */
+.custom-container {
+  padding: 1rem 1.25rem;
+  border-radius: var(--guide-radius-sm);
+  margin: 1rem 0;
+}
+
+.custom-container.tip,
+.custom-container.info,
+.custom-container.details {
+  border-left: 4px solid var(--guide-accent);
+}
+
+.custom-container.tip {
+  background: var(--guide-callout-tip-bg);
+}
+
+.custom-container.info {
+  background: var(--guide-accent-soft);
+}
+
+.custom-container.details {
+  background: var(--guide-surface);
+  border: 1px solid var(--vp-c-bg-mute);
+}
+
+.custom-container-title {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--guide-accent);
+}
+
+.custom-container.details ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.custom-container.details li {
+  margin: 0.5rem 0;
+  padding-left: 0.25rem;
+}
+
+/* 小学生专用 */
+.fun-container {
+  background: var(--guide-accent-soft);
+  border-radius: var(--guide-radius-lg);
+  padding: 1.25rem;
+  margin: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  border: 2px dashed var(--guide-accent-border);
+}
+
+.mascot {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.speech-bubble {
+  background: var(--guide-surface-elevated);
+  border-radius: var(--guide-radius-sm);
+  padding: 1rem 1.15rem;
+  position: relative;
+  box-shadow: var(--guide-shadow);
+  flex: 1;
+}
+
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent var(--guide-surface-elevated) transparent transparent;
+}
+
+.tip-box {
+  background: var(--guide-callout-warn-bg);
+  border: 1px solid rgba(234, 179, 8, 0.35);
+  border-radius: var(--guide-radius-sm);
+  padding: 1rem 1.15rem;
+  margin: 1.25rem 0;
+}
+
+.tip-box .tip-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #a16207;
+}
+
+.dark .tip-box .tip-title {
+  color: #fbbf24;
+}
+
+.rule-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+.rule-item {
+  background: var(--guide-surface-elevated);
+  border-radius: var(--guide-radius-sm);
+  padding: 1rem 1.15rem;
+  box-shadow: var(--guide-shadow);
+  border-top: 3px solid var(--guide-accent);
+}
+
+.rule-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.rule-text {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.rule-examples {
+  color: var(--guide-text-muted);
+  font-size: 0.92rem;
+}
+
+.learning-card {
+  background: var(--guide-surface-elevated);
+  border-radius: var(--guide-radius-lg);
+  padding: 1.25rem;
+  margin: 1.25rem 0;
+  box-shadow: var(--guide-shadow);
+  border: 1px solid var(--guide-accent-border);
+}
+
+.learning-card .step {
+  margin: 0.75rem 0;
+  padding: 0.85rem;
+  background: var(--guide-surface);
+  border-radius: var(--guide-radius-sm);
+}
+
+.step-icon {
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.learning-card .step-title {
+  font-weight: 700;
+  color: var(--guide-accent);
+  margin-bottom: 0.35rem;
+}
+
+.learning-card .step-content {
+  color: var(--guide-text-muted);
+  line-height: 1.55;
+}
+
+.teacher-tips,
+.parent-tips {
+  background: var(--guide-surface);
+  border-radius: var(--guide-radius-sm);
+  padding: 1rem 1.15rem;
+  margin: 0.75rem 0;
+  border-left: 4px solid var(--guide-accent);
+}
+
+.teacher-tips .tip-title,
+.parent-tips .tip-title {
+  font-weight: 700;
+  color: var(--guide-accent);
+  margin-bottom: 0.5rem;
+}
+
+.teacher-tips .tip-content,
+.parent-tips .tip-content {
+  color: var(--guide-text-muted);
+  padding-left: 0;
+}
+
+/* 暗色：指南组件统一前景色 */
+.dark .guide-page .policy-card,
+.dark .guide-page .tool-card,
+.dark .guide-page .step-card,
+.dark .guide-page .skill-card,
+.dark .guide-page .qa-item,
+.dark .guide-page .principle-section,
+.dark .guide-page .rule-item,
+.dark .guide-page .speech-bubble,
+.dark .guide-page .compare-card,
+.dark .guide-page .example-good,
+.dark .guide-page .example-bad {
+  background-color: var(--custom-block-bg);
+  color: var(--custom-block-text);
+}
+
+.dark .guide-page .policy-card p,
+.dark .guide-page .tool-card li,
+.dark .guide-page .step-content,
+.dark .guide-page .skill-content,
+.dark .guide-page .example-content,
+.dark .guide-page .rule-examples {
+  color: var(--custom-block-text);
+  opacity: 0.9;
+}
+
+.dark .guide-page .speech-bubble::before {
+  border-color: transparent var(--custom-block-bg) transparent transparent;
+}
+ 
