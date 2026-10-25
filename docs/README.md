@@ -34,7 +34,7 @@ npm run export:primary-wechat  # 仅小学生
 npm run export:parents-wechat  # 仅家长
 ```
 
-输出目录：[`exports/`](../exports/)
+输出目录：`exports/`
 
 | 文件 | 说明 |
 | --- | --- |
